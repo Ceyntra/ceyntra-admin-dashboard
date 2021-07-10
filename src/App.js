@@ -3,7 +3,7 @@ import React  from 'react'
 import Login from './Login';
 import Dashboard from './pages/Dashboard';
 import {BrowserRouter as Router , Route, Switch} from 'react-router-dom';
-import NavBar from './components/NavBar';
+import NavBar from './components/navbar/NavBar';
 
 // Pages
 import Traveller from './pages/Traveller';
@@ -15,6 +15,7 @@ import Guide from './pages/Guide';
 import Message from './pages/Message';
 import Profile from './pages/Profile';
 
+
 function App() {
   return (
     <div className="App">
@@ -22,7 +23,7 @@ function App() {
           <div>
             <Route exact path='/' component={Login} />
             <Route path='/home'>
-              <NavBar/>
+              <NavBar url={window.location.pathname}/>
               <Switch>
                   <Route exact path='/home' component={Dashboard} />
                   <Route exact path='/home/travellers' component={Traveller} />
