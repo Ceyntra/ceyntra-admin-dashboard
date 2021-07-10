@@ -3,3 +3,10 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
+
+.page-content{
+  position: relative;
+  left: 270px;
+  top: 70px;
+}
+
