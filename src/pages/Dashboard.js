@@ -1,12 +1,10 @@
 import React from 'react'
-import NavBar from '../components/navbar/NavBar'
-import {BrowserRouter as Router , Route} from 'react-router-dom';
-import Traveller from './Traveller';
+
 
 function Dashboard() {
     return (
         <div>
-            {/* <h1>Dashboard page</h1> */}
+            <h1>Dashboard</h1>
         </div>
     )
 }
