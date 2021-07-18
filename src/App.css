@@ -1,12 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+/* //////////////////////////////////  login page styles /////////////////////////////////// */
+
+.loginPage-container {
+  border: 1px solid red;
+  height: 100vh;
+  display: flex;
+  /* margin: 0; */
 }
 
-.page-content{
-  position: relative;
-  left: 270px;
-  top: 70px;
+.login-left {
+  width: 50%;
+
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.login-right {
+  width: 50%;
+  border: 1px solid black;
+}
+
+.login-signIn-container {
+  border: 1px solid black;
+  width: fit-content;
+  height: 600px;
+}
+.login-header {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.login-sub-header {
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+.login-email-container {
+  margin-bottom: 30px;
+}
+
+.login-email-text {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.login-email-input-container {
+}
+.login-email-input {
+  border: 2px solid rgb(223, 221, 221);
+  outline: none;
+  height: 40px;
+  width: 96%;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.login-email-input::placeholder {
+  color: rgb(177, 177, 177);
+  opacity: 1; /* Firefox */
+  font-size: 15px;
+}
+
+.login-email-input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(177, 177, 177);
+}
+
+.login-email-input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(177, 177, 177);
+}
+
+.login-password-container {
+}
+
+.login-password-text {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.login-password-input::placeholder {
+  color: rgb(177, 177, 177);
+  opacity: 1; /* Firefox */
+  font-size: 15px;
+}
+
+.login-password-input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(177, 177, 177);
+}
+
+.login-password-input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(177, 177, 177);
+}
+
+.login-password-input-container {
+}
+.login-password-input {
+  border: 2px solid rgb(223, 221, 221);
+  outline: none;
+  height: 40px;
+  width: 96%;
+  border-radius: 5px;
+  padding-left: 10px;
+}

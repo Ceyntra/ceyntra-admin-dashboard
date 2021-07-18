@@ -5,6 +5,20 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "./service/axios";
 import { LoginContext } from "./states/LoginContext";
+import {
+  List,
+  ListItem,
+  Divider,
+  ListItemIcon,
+  makeStyles,
+} from "@material-ui/core";
+import "./App.css";
+
+const useStyles = makeStyles({
+  ht: {
+    height: "100%",
+  },
+});
 
 function Login() {
   const [email, setemail] = useState("");
@@ -32,15 +46,17 @@ function Login() {
             })
             .then((res2) => {
               sessionStorage.setItem("token", res2.data);
-
               history.push("/home");
             });
         }
       });
   };
 
+  const classes = useStyles();
+
   return (
-    <div>
+    <div className="loginPage-container">
+      {/* <h1>ballalal</h1>
       <h1>Login page</h1>
 
       {loginError != null ? (
@@ -73,7 +89,43 @@ function Login() {
       />
       <br />
       <br />
-      <button onClick={login}>Login</button>
+      <button onClick={login}>Login</button> */}
+
+      <div className="login-left">
+        <div className="login-signIn-container">
+          <div className="login-header">SignIn</div>
+          <div className="login-sub-header">
+            Enter your email and password to sign in
+          </div>
+          <div className="login-email-container">
+            <div className="login-email-text">Email</div>
+            <div className="login-email-input-container">
+              <input
+                placeholder="Email"
+                className="login-email-input"
+                type="text"
+                name=""
+                id=""
+              />
+            </div>
+          </div>
+
+          <div className="login-password-container">
+            <div className="login-password-text">Password</div>
+            <div className="login-password-input-container">
+              <input
+                className="login-password-input"
+                type="text"
+                name=""
+                id=""
+                placeholder="Password"
+              />
+            </div>
+          </div>
+          <div className="login-password-container"></div>
+        </div>
+      </div>
+      <div className="login-right">dfdf</div>
     </div>
   );
 }
