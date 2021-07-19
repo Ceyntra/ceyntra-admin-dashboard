@@ -39,7 +39,7 @@ function ForgetPassword() {
             <img className="ceyntra-logo" src={ceyntraLogo} alt="" srcset="" />
           </div>
 
-          <div className="forget-header">Forget password</div>
+          <div className="login-header">Forget password</div>
           <div className="login-sub-header">
             Enter your Email. we'll send a PIN to the email you enterd.
           </div>

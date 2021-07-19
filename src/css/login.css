@@ -52,11 +52,13 @@
   color: #8392ab;
 }
 
-.login-email-container {
+.login-email-container,
+.reset-pin-container {
   margin-bottom: 30px;
 }
 
-.login-email-text {
+.login-email-text,
+.reset-pin-text {
   margin-bottom: 10px;
   font-size: 15px;
 }
@@ -73,6 +75,10 @@
 
 .login-password-container {
   margin-bottom: 10px;
+}
+
+.reset-password-container {
+  margin-bottom: 40px;
 }
 
 .login-password-text {
@@ -171,6 +177,7 @@
   }
   .login-signIn-container {
     margin-top: 40px;
+    margin-bottom: 50px;
   }
   .loginPage-container {
     height: fit-content;

@@ -19,6 +19,7 @@ import { AppBar } from "@material-ui/core";
 import Forbidden from "./pages/Forbidden";
 import { LoginProvider } from "./states/LoginContext";
 import ForgetPassword from "./pages/ForgetPassword";
+import ResetPassword from "./pages/ResetPassword";
 
 function App() {
   return (
@@ -28,7 +29,11 @@ function App() {
           <div>
             <Route exact path="/" component={Login} />
             <Route path="/forbidden" component={Forbidden} />
-            <Route path="/forgetPassword" component={ForgetPassword} />
+            <Route exact path="/forgetPassword" component={ForgetPassword} />
+            <Route
+              path="/forgetPassword/resetPassword"
+              component={ResetPassword}
+            />
             <Route path="/home">
               <TopBar />
               <NavBar url={window.location.pathname} />

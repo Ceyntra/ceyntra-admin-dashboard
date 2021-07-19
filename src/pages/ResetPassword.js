@@ -7,13 +7,13 @@ import { LoginContext } from "../states/LoginContext";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Switch from "@material-ui/core/Switch";
 import Button from "@material-ui/core/Button";
-import loginImage from "../assets/images/forget.svg";
+import loginImage from "../assets/images/reset2.svg";
 import "../css/forget.css";
 
 import ceyntraLogo from "../ceyntra1.png";
 
 // function
-function ForgetPassword() {
+function ResetPassword() {
   const [state, setState] = React.useState({
     checkedA: true,
     checkedB: true,
@@ -39,9 +39,9 @@ function ForgetPassword() {
             <img className="ceyntra-logo" src={ceyntraLogo} alt="" srcset="" />
           </div>
 
-          <div className="forget-header">Forget password</div>
+          <div className="login-header">Reset password</div>
           <div className="login-sub-header">
-            Enter your Email. we'll send a PIN to the email you enterd.
+            Enter your PIN and New password for reset your password.
           </div>
 
           {loginError != null ? (
@@ -53,11 +53,11 @@ function ForgetPassword() {
           )}
 
           <form action="">
-            <div className="login-email-container">
-              <div className="login-email-text">Email</div>
-              <div className="login-email-input-container">
+            <div className="reset-pin-container">
+              <div className="reset-pin-text">PIN</div>
+              <div className="reset-pin-input-container">
                 <input
-                  placeholder="Email"
+                  placeholder="PIN"
                   className="login-email-input"
                   type="text"
                   onChange={(e) => {
@@ -65,6 +65,21 @@ function ForgetPassword() {
                   }}
                   name=""
                   id=""
+                />
+              </div>
+            </div>
+            <div className="reset-password-container">
+              <div className="login-password-text">New Password</div>
+              <div className="login-password-input-container">
+                <input
+                  className="login-password-input"
+                  type="text"
+                  onChange={(e) => {
+                    setpassword(e.target.value);
+                  }}
+                  name=""
+                  id=""
+                  placeholder="New Password"
                 />
               </div>
             </div>
@@ -82,16 +97,14 @@ function ForgetPassword() {
                 fontSize: 16,
               }}
             >
-              Send PIN
+              reset password
             </Button>
           </form>
 
           <div className="login-forget-password">
-            <span className="login-forget">Back to login page </span>{" "}
+            <span className="login-forget">Back to forget password page </span>{" "}
             <span className="login-clickHere">Click here</span>
           </div>
-
-          <div className="login-password-container"></div>
         </div>
       </div>
       <div className="login-right">
@@ -101,4 +114,4 @@ function ForgetPassword() {
   );
 }
 
-export default ForgetPassword;
+export default ResetPassword;

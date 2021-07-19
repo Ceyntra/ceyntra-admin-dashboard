@@ -72,7 +72,7 @@ function Login() {
         }
       }
     } else {
-      setloginError("Pleas enter valid email address!");
+      setloginError("Please Enter valid email address!");
     }
   };
 
@@ -119,7 +119,7 @@ function Login() {
             <img className="ceyntra-logo" src={ceyntraLogo} alt="" srcset="" />
           </div>
 
-          <div className="login-header">CEYNTRA ADMIN</div>
+          <div className="login-header">Ceyntra Admin</div>
           <div className="login-sub-header">
             Enter your email and password to sign in
           </div>
