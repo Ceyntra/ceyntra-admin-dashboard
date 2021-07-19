@@ -23,7 +23,8 @@ function Login() {
 
   const emailValidator =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  const passwordValidator = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+  const passwordValidator =
+    /^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/;
 
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
@@ -34,28 +35,44 @@ function Login() {
   var login = async (e) => {
     e.preventDefault();
     console.log(emailValidator.test(email));
-    await axios
-      .post("/login", {
-        email: email,
-        password: password,
-      })
-      .then((res1) => {
-        var response = res1.data;
-        if (response == "emailOrPasswordIsIncorrect") {
-          setloginError("emailOrPasswordIsIncorrect");
-        } else if (response == "userNotFound") {
-          setloginError("userNotFound");
+
+    if (emailValidator.test(email)) {
+      if (passwordValidator.test(password)) {
+        setloginError(null);
+        await axios
+          .post("/login", {
+            email: email,
+            password: password,
+          })
+          .then((res1) => {
+            var response = res1.data;
+            if (response == "emailOrPasswordIsIncorrect") {
+              setloginError("emailOrPasswordIsIncorrect");
+            } else if (response == "userNotFound") {
+              setloginError("userNotFound");
+            } else {
+              axios
+                .post(`/encryptDetails`, {
+                  userId: response,
+                })
+                .then((res2) => {
+                  sessionStorage.setItem("token", res2.data);
+                  history.push("/home");
+                });
+            }
+          });
+      } else {
+        if (password.length < 8) {
+          setloginError("Please provide password at least 8 characters!");
         } else {
-          axios
-            .post(`/encryptDetails`, {
-              userId: response,
-            })
-            .then((res2) => {
-              sessionStorage.setItem("token", res2.data);
-              history.push("/home");
-            });
+          setloginError(
+            "Password must contain a special charater, a number, a uppercase and lowercase letter!"
+          );
         }
-      });
+      }
+    } else {
+      setloginError("Pleas enter valid email address!");
+    }
   };
 
   return (

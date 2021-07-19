@@ -25,6 +25,7 @@
 .login-signIn-container {
   /* border: 1px solid black; */
   width: fit-content;
+  max-width: 405px;
   height: 600px;
 }
 .login-header {
