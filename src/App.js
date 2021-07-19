@@ -1,4 +1,4 @@
-import "./App.css";
+import "./css/login.css";
 import React from "react";
 import Login from "./Login";
 import Dashboard from "./pages/Dashboard";

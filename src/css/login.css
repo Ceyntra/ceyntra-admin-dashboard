@@ -1,0 +1,140 @@
+.loginPage-container {
+  /* border: 1px solid red; */
+  height: 100vh;
+  display: flex;
+  /* margin: 0; */
+}
+
+.login-left {
+  width: 40%;
+
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-right {
+  width: 60%;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-signIn-container {
+  /* border: 1px solid black; */
+  width: fit-content;
+  height: 600px;
+}
+.login-header {
+  font-size: 50px;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #21d4fd, #2152ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.login-sub-header {
+  font-size: 15px;
+  margin-bottom: 40px;
+  color: #8392ab;
+}
+
+.login-email-container {
+  margin-bottom: 30px;
+}
+
+.login-email-text {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.login-email-input {
+  border: 2px solid rgb(223, 221, 221);
+  outline: none;
+  height: 40px;
+  width: 96%;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.login-password-container {
+  margin-bottom: 10px;
+}
+
+.login-password-text {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.login-password-input {
+  border: 2px solid rgb(223, 221, 221);
+  outline: none;
+  height: 40px;
+  width: 96%;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.login-remember-me-container {
+  display: flex;
+  /* border: 1px solid black; */
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.login-remember-me-text {
+  font-size: 15px;
+  margin-left: -15px;
+}
+
+.login-clickHere {
+  background: linear-gradient(to right, #21d4fd, #2152ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-forget {
+  color: #8392ab;
+  font-size: 15px;
+}
+
+.login-error {
+  color: red;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.login-img {
+  width: 85%;
+}
+
+.login-password-input::placeholder {
+  color: rgb(177, 177, 177);
+  opacity: 1;
+  font-size: 15px;
+}
+
+.login-password-input:-ms-input-placeholder {
+  color: rgb(177, 177, 177);
+}
+
+.login-password-input::-ms-input-placeholder {
+  color: rgb(177, 177, 177);
+}
+
+.login-email-input::placeholder {
+  color: rgb(177, 177, 177);
+  opacity: 1;
+  font-size: 15px;
+}
+
+.login-email-input:-ms-input-placeholder {
+  color: rgb(177, 177, 177);
+}
+
+.login-email-input::-ms-input-placeholder {
+  color: rgb(177, 177, 177);
+}
