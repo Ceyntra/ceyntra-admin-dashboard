@@ -10,6 +10,8 @@ import Switch from "@material-ui/core/Switch";
 import Button from "@material-ui/core/Button";
 import loginImage from "./assets/images/login.svg";
 
+import ceyntraLogo from "./ceyntra1.png";
+
 // function
 function Login() {
   const [state, setState] = React.useState({
@@ -66,7 +68,7 @@ function Login() {
           setloginError("Please provide password at least 8 characters!");
         } else {
           setloginError(
-            "Password must contain a special charater, a number, a uppercase and lowercase letter!"
+            "Password must contain a special charater, a number, a uppercase letter and lowercase letter!"
           );
         }
       }
@@ -114,6 +116,10 @@ function Login() {
 
       <div className="login-left">
         <div className="login-signIn-container">
+          <div className="ceyntra-logo-container">
+            <img className="ceyntra-logo" src={ceyntraLogo} alt="" srcset="" />
+          </div>
+
           <div className="login-header">CEYNTRA ADMIN</div>
           <div className="login-sub-header">
             Enter your email and password to sign in

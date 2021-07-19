@@ -2,18 +2,17 @@
   /* border: 1px solid red; */
   height: 100vh;
   display: flex;
-  /* margin: 0; */
+  justify-content: center;
+  align-items: center;
 }
 
 .login-left {
   width: 40%;
-
   /* border: 1px solid black; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .login-right {
   width: 60%;
   /* border: 1px solid black; */
@@ -26,7 +25,19 @@
   /* border: 1px solid black; */
   width: fit-content;
   max-width: 405px;
-  height: 600px;
+  /* min-height: 600px; */
+  margin: 10px;
+}
+.ceyntra-logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  display: none;
+}
+.ceyntra-logo {
+  width: 150px;
+  height: 150px;
 }
 .login-header {
   font-size: 50px;
@@ -138,4 +149,36 @@
 
 .login-email-input::-ms-input-placeholder {
   color: rgb(177, 177, 177);
+}
+@media (max-width: 1300px) {
+  .login-right {
+    display: none;
+  }
+  .login-img {
+    display: none;
+  }
+
+  .login-left {
+    width: 100%;
+    overflow-y: scroll;
+  }
+  .login-right {
+    width: 0%;
+  }
+
+  .ceyntra-logo-container {
+    display: flex;
+  }
+  .login-signIn-container {
+    margin-top: 40px;
+  }
+  .loginPage-container {
+    height: fit-content;
+  }
+}
+
+@media (max-width: 430px) {
+  .login-header {
+    font-size: 11vw;
+  }
 }
