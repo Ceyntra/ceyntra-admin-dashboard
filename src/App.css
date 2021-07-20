@@ -3,10 +3,10 @@
 body {
   margin: 0;
 }
+
 .page-content {
-  position: relative;
-  left: 270px;
-  top: 70px;
+  margin-left: 270px;
+  margin-top: 70px;
 }
 
 /* //////////////////////////////////  login page styles /////////////////////////////////// */
