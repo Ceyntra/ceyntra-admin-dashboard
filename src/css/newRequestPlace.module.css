@@ -1,0 +1,20 @@
+.newRequestItem{
+    background-color: #E6E6FA;
+    border-radius: 10px;
+    padding: 2%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: smaller;
+}
+
+.newRequestItem img{
+    border-radius: 15px;
+}
+
+.forwardIcon{
+    background-color: #87CEFA;
+    padding: 5px 5px 2px 5px;
+    border-radius: 50%;
+}
