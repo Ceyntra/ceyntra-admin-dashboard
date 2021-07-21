@@ -5,7 +5,7 @@ import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import ForwardIcon from '@material-ui/icons/Forward';
 import placePic from '../../assets/images/h4.jpg';
 
-function NewRequestPlace(){
+function NewRequestHotel(){
     return(
         <div className={classes.newRequestItem}>
             <div>
@@ -30,4 +30,4 @@ function NewRequestPlace(){
     );
 }
 
-export default NewRequestPlace;
+export default NewRequestHotel;
