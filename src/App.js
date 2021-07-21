@@ -9,6 +9,7 @@ import TopBar from "./components/navbar/TopBar";
 // Pages
 import Traveller from "./pages/Traveller";
 import Places from "./pages/Places";
+import TravelPlaces from "./pages/TravelPlaces";
 import Service from "./pages/Service";
 import Hotel from "./pages/Hotel";
 import Taxi from "./pages/Taxi";
@@ -34,7 +35,7 @@ function App() {
                 <Switch>
                   <Route exact path="/home" component={Dashboard} />
                   <Route exact path="/home/travellers" component={Traveller} />
-                  <Route path="/home/places" component={Places} />
+                  <Route path="/home/places" component={TravelPlaces} />
                   <Route path="/home/services" component={Service} />
                   <Route path="/home/hotels" component={Hotel} />
                   <Route path="/home/taxis" component={Taxi} />
