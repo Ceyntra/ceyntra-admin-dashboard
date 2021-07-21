@@ -5,7 +5,7 @@ import HotelIcon from '@material-ui/icons/Hotel';
 import Card from "../components/hotel/card";
 import NotificationImportantIcon from '@material-ui/icons/NotificationImportant';
 import ProvinceButton from "../components/hotel/provinceButton";
-import NewRequestPlace from "../components/hotel/newRequestPlace";
+import NewRequestHotel from "../components/hotel/newRequestHotel";
 import RightSection from "../components/hotel/rightSectionHotel";
 import RightSectionHotel from "../components/hotel/rightSectionHotel";
 
@@ -26,9 +26,9 @@ function Hotel() {
         <div className={classes.requestSection}>
           <h3>New Hotel Requests</h3>
 
-          <NewRequestPlace></NewRequestPlace>
-          <NewRequestPlace></NewRequestPlace>
-          <NewRequestPlace></NewRequestPlace>
+          <NewRequestHotel></NewRequestHotel>
+          <NewRequestHotel></NewRequestHotel>
+          <NewRequestHotel></NewRequestHotel>
         </div>
       </div>
       
