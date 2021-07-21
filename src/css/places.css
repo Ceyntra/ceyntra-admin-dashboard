@@ -1,0 +1,129 @@
+.places1{
+    width : 30%;
+    height: 600px;
+    background-color: white;
+    float: left;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
+    border-radius: 5px;
+}
+
+.places2{
+    width : 65%;
+    height: 400px;
+    background-color: white;
+    float: right;
+    margin-top: 10px;
+    margin-right: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
+    border-radius: 5px;
+    
+}
+
+.placesImage{
+    width: 95%;
+    height: 80px;
+    margin-top: 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.02), 0 3px 10px 0 rgba(0,0,0,0.02);
+}
+
+.placesImage :hover{
+    background-color: rgb(216, 216, 216);
+}
+
+.placesigiriya{
+    border-radius: 5px;
+    float: left;
+}
+
+.sigiriya-img{
+    border-radius: 5px;
+    margin-top: 6px;
+    margin-left: 6px;
+}
+
+.placetext p{
+    padding: 25px;
+    margin-left: 50px
+}
+
+.places1Topic{
+    margin-left: 25px;
+    color: gray;
+}
+
+.places2image1{
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+.places2images{
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.place2plus{
+    width: 75px;
+    height: 75px;
+    margin-top: 5px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.1);
+}
+
+.place2button{
+    margin-top: 5px;
+}
+
+.place2name{
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+.places2description{
+    width: 200px;
+}
+
+.places2description2{
+    margin-left: 25px;
+}
+
+.place2descriptiontopic{
+    float: left;
+    width: 10%;
+}
+
+.place2descriptionsigiriya{
+    float: right;
+    width: 87%;
+    
+}
+.placce2rating{
+    float: left;
+    margin-top: 25px;
+}
+
+.places2save {
+    float: left;
+    margin-top: 50px;
+    padding: 3px;
+    padding-left: 28px;
+    padding-right: 28px;
+    background-color: white;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.places2cancel{
+    margin-top: 50px;
+    padding: 3px;
+    padding-left: 48px;
+    padding-right: 48px;
+    background-color: white;
+}
