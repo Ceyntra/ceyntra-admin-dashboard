@@ -22,8 +22,8 @@ function NewRequestPlace(){
               <img src={placePic} width='60px' height='60px' />
             </div>
             <div>
-              <CheckCircleIcon style={{color:"green"}}></CheckCircleIcon> Approve <br />
-              <DeleteForeverIcon style={{color:"red"}}></DeleteForeverIcon> Delete <br />
+              <button><CheckCircleIcon style={{color:"green"}}></CheckCircleIcon> Approve</button> 
+              <button className={classes.clrSpan}><DeleteForeverIcon style={{color:"red"}}></DeleteForeverIcon> Delete</button>
             </div>
             <div className={classes.forwardIcon}>
               <ForwardIcon></ForwardIcon>

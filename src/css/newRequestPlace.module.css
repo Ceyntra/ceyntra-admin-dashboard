@@ -9,6 +9,25 @@
     font-size: smaller;
 }
 
+.newRequestItem button{
+    color: green;
+    display: block;
+    margin-bottom: 4px;
+    cursor: pointer;
+    border: none;
+    outline: 0;
+    min-width: 100px;
+    background-color: transparent;
+}
+
+.newRequestItem button:hover{
+    font-weight: bolder;
+}
+
+.newRequestItem .clrSpan{
+    color: red;
+}
+
 .newRequestItem img{
     border-radius: 15px;
 }
@@ -17,4 +36,5 @@
     background-color: #87CEFA;
     padding: 5px 5px 2px 5px;
     border-radius: 50%;
+    cursor: pointer;
 }
