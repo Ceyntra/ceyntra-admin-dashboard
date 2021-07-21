@@ -6,6 +6,8 @@ import Card from "../components/hotel/card";
 import NotificationImportantIcon from '@material-ui/icons/NotificationImportant';
 import ProvinceButton from "../components/hotel/provinceButton";
 import NewRequestPlace from "../components/hotel/newRequestPlace";
+import RightSection from "../components/hotel/rightSectionHotel";
+import RightSectionHotel from "../components/hotel/rightSectionHotel";
 
 const PROVINCES=['Matara', 'Hambantota', 'Galle', 'Colombo', 'Gampaha', 'Kalutara', 'Badulla', 'Moneragala', 'Kegalle', 'Rathnapura', 'Kurunegala', 'Puttalam', 'Jaffna', 'Kilinochchi', 'Mannar', 'Mullaitivu', 'Vavuniya', 'Anuradhapura', 'Polonnaruwa', 'Ampara', 'Batticalo', 'Trincomalee', 'Kandy', 'Matale', 'Nuwara Eliya'];
 
@@ -31,7 +33,23 @@ function Hotel() {
       </div>
       
       <div className={classes.right}>
-      <div className={classes.requestSection}></div>
+        <div className={classes.rightSection}>
+          <h3>Top Rated Hotels</h3>
+
+          <RightSectionHotel></RightSectionHotel>
+          <RightSectionHotel></RightSectionHotel>
+          <RightSectionHotel></RightSectionHotel>
+          <RightSectionHotel></RightSectionHotel>
+          <RightSectionHotel></RightSectionHotel>
+        </div>
+
+        <div className={classes.rightSection}>
+          <h3>Banned Hotels</h3>
+
+          <RightSectionHotel></RightSectionHotel>
+          <RightSectionHotel></RightSectionHotel>
+          <RightSectionHotel></RightSectionHotel>
+        </div>
       </div>
     </div>
   );

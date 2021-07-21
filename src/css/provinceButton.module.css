@@ -1,5 +1,4 @@
 .hotelsSection{
-    /* background-color: yellow; */
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -20,4 +19,8 @@
     outline: 0;
     margin-bottom: 10px;
     /* max-width: 100%; */
+}
+
+.hotelsSection button:hover{
+    background-color: #AFEEEE;
 }

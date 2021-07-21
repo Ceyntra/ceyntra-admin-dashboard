@@ -6,13 +6,10 @@
 
 .left{
     width: 60%;
-    /* background-color: green; */
 }
 
 .right{
     width: 40%;
-    height: 50px;
-    /* background-color: hotpink; */
 }
 
 .content{
@@ -26,4 +23,13 @@
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
+}
+
+.rightSection{
+    background-color: white;
+    padding: 2%;
+    margin: 0 5% 0 5%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
 }
