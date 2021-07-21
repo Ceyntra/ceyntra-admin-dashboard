@@ -1,0 +1,31 @@
+.cardRow{
+    display: flex;
+}
+
+.left{
+    width: 60%;
+    /* background-color: green; */
+}
+
+.right{
+    width: 40%;
+    height: 50px;
+    /* background-color: hotpink; */
+}
+
+.content{
+    display: flex;
+    padding-left: 1%;
+}
+
+.requestSection{
+    background-color: white;
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.newRequestItem{
+    background-color: #F8F9FA;
+    padding: 1%;
+}
