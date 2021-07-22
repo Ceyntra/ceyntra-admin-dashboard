@@ -1,0 +1,68 @@
+.dbContent{
+    padding-left: 1%;
+    padding-right: 2%;
+}
+
+.countCard{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.stat{
+    display: flex;
+}
+
+.statLeft{
+    width: 60%;
+}
+
+.statRight{
+    height: 10px;
+    width: 40%;
+    margin-left: 2%;
+}
+
+.statRight .countRow{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.whiteBG{
+    background-color: white;
+    padding: 2%;
+    /* margin: 0 5% 0 5%; */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+}
+
+.whiteBGImg{
+    width: 100%;
+    height: auto;
+}
+
+.iconOne{
+    display: inline;
+    padding: 10px 10px 5px 10px;
+    border-radius: 10%;
+    margin-bottom: 115px;
+    background-color: violet;
+}
+
+.iconTwo{
+    display: inline;
+    padding: 10px 10px 5px 10px;
+    border-radius: 10%;
+    margin-bottom: 115px;
+    background-color: lightskyblue;
+}
+
+.iconThree{
+    display: inline;
+    padding: 10px 10px 5px 10px;
+    border-radius: 10%;
+    margin-bottom: 115px;
+    background-color: lightsalmon;
+}
