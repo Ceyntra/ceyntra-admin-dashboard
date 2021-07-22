@@ -7,17 +7,17 @@ import { useState, useContext } from "react";
 import axios from "../service/axios";
 import { LoginContext } from "../states/LoginContext";
 
-import classes from '../css/dashboard.module.css';
+import classes from "../css/dashboard.module.css";
 import StatCard from "../components/dashboard/statCard";
-import HotelIcon from '@material-ui/icons/Hotel';
-import MapIcon from '@material-ui/icons/Map';
-import LocalTaxiIcon from '@material-ui/icons/LocalTaxi';
-import PeopleIcon from '@material-ui/icons/People';
-import TouchAppIcon from '@material-ui/icons/TouchApp';
-import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
-import barChart from '../assets/images/bar-chart.png';
-import pieChart from '../assets/images/piechrt.PNG';
-import barchart from '../assets/images/barchart.png';
+import HotelIcon from "@material-ui/icons/Hotel";
+import MapIcon from "@material-ui/icons/Map";
+import LocalTaxiIcon from "@material-ui/icons/LocalTaxi";
+import PeopleIcon from "@material-ui/icons/People";
+import TouchAppIcon from "@material-ui/icons/TouchApp";
+import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
+import barChart from "../assets/images/bar-chart.png";
+import pieChart from "../assets/images/piechrt.PNG";
+import barchart from "../assets/images/barchart.png";
 import NewRequestPlace from "../components/places/newRequestPlace";
 
 function Dashboard(props) {
@@ -37,26 +37,26 @@ function Dashboard(props) {
       });
   };
 
-  // useEffect(async () => {
-  //   if (sessionStorage.getItem("token") != null) {
-  //     // send user details and get back is userLoggedIn
-  //     await axios
-  //       .post(`/checkLoginStatus`, {
-  //         cipherText: sessionStorage.getItem("token"),
-  //       })
-  //       .then((res) => {
-  //         if (res.data.loginState == "1") {
-  //           // console.log(res.data);
-  //           getLoggedInUser(res.data.userId);
-  //         } else {
-  //           // console.log(res.data);
-  //           history.push("/forbidden");
-  //         }
-  //       });
-  //   } else {
-  //     history.push("/forbidden");
-  //   }
-  // }, []);
+  useEffect(async () => {
+    if (sessionStorage.getItem("token") != null) {
+      // send user details and get back is userLoggedIn
+      await axios
+        .post(`/checkLoginStatus`, {
+          cipherText: sessionStorage.getItem("token"),
+        })
+        .then((res) => {
+          if (res.data.loginState == "1") {
+            // console.log(res.data);
+            getLoggedInUser(res.data.userId);
+          } else {
+            // console.log(res.data);
+            history.push("/forbidden");
+          }
+        });
+    } else {
+      history.push("/forbidden");
+    }
+  }, []);
 
   // get loggedin user details to the frontend
   var getLoggedInUser = async (loggedInUserId) => {
@@ -72,10 +72,26 @@ function Dashboard(props) {
       {/* <button onClick={logout}>Logout</button> */}
 
       <div className={classes.countCard}>
-        <StatCard text='Travellers' count='13,532' icon={<PeopleIcon style={{color:"white"}} />}></StatCard>
-        <StatCard text='Hotels' count='315' icon={<HotelIcon style={{color:"white"}} />}></StatCard>
-        <StatCard text='Taxi Drivers' count='135' icon={<LocalTaxiIcon style={{color:"white"}} />}></StatCard>
-        <StatCard text='Guides' count='225' icon={<MapIcon style={{color:"white"}} />}></StatCard>
+        <StatCard
+          text="Travellers"
+          count="13,532"
+          icon={<PeopleIcon style={{ color: "white" }} />}
+        ></StatCard>
+        <StatCard
+          text="Hotels"
+          count="315"
+          icon={<HotelIcon style={{ color: "white" }} />}
+        ></StatCard>
+        <StatCard
+          text="Taxi Drivers"
+          count="135"
+          icon={<LocalTaxiIcon style={{ color: "white" }} />}
+        ></StatCard>
+        <StatCard
+          text="Guides"
+          count="225"
+          icon={<MapIcon style={{ color: "white" }} />}
+        ></StatCard>
       </div>
       <div className={classes.stat}>
         <div className={classes.statLeft}>
@@ -100,17 +116,31 @@ function Dashboard(props) {
             <img className={classes.whiteBGImg} src={barchart} />
             <div className={classes.countRow}>
               <div>
-              <div className={classes.iconOne}><PeopleIcon style={{color:"white"}}></PeopleIcon></div> Users <br /><br />
+                <div className={classes.iconOne}>
+                  <PeopleIcon style={{ color: "white" }}></PeopleIcon>
+                </div>{" "}
+                Users <br />
+                <br />
                 3.6K <br />
                 <hr />
               </div>
               <div>
-              <div className={classes.iconTwo}><TouchAppIcon style={{color:"white"}}></TouchAppIcon></div> Clicks <br /><br />
+                <div className={classes.iconTwo}>
+                  <TouchAppIcon style={{ color: "white" }}></TouchAppIcon>
+                </div>{" "}
+                Clicks <br />
+                <br />
                 2M <br />
                 <hr />
               </div>
               <div>
-              <div className={classes.iconThree}><MonetizationOnIcon style={{color:"white"}}></MonetizationOnIcon></div> Sales <br /><br />
+                <div className={classes.iconThree}>
+                  <MonetizationOnIcon
+                    style={{ color: "white" }}
+                  ></MonetizationOnIcon>
+                </div>{" "}
+                Sales <br />
+                <br />
                 $772 <br />
                 <hr />
               </div>
