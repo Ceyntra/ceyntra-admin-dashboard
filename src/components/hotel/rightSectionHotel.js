@@ -1,5 +1,5 @@
-import classes from "../../css/rightSectionHotel.module.css";
-import React, { Component } from "react";
+import "../../css/rightSectionHotel.css";
+import React from "react";
 import placePic from "../../assets/images/h4.jpg";
 import Rating from "@material-ui/lab/Rating";
 import Typography from "@material-ui/core/Typography";
@@ -7,7 +7,7 @@ import Box from "@material-ui/core/Box";
 
 function RightSectionHotel() {
   return (
-    <div className={classes.topRatedHotel}>
+    <div className="topRatedHotel">
       <div>
         <Box component="fieldset" mb={0} borderColor="transparent">
           <Typography component="legend">Jetwing Hotel</Typography>

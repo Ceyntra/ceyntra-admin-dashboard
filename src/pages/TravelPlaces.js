@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import classes from '../css/travelPlaces.module.css';
+import '../css/travelPlaces.css';
 import ProvinceButton from "../components/hotel/provinceButton";
 import NewRequestPlace from "../components/places/newRequestPlace";
 import RightSectionPlace from "../components/places/rightSectionPlace";
@@ -11,20 +11,20 @@ const DISTRICTS=['Matara', 'Hambantota', 'Galle', 'Colombo', 'Gampaha', 'Kalutar
 
 function TravelPlaces(){
     return(
-        <div className={classes.content}>
-            <div className={classes.left}>
+        <div className="content">
+            <div className="left">
                 <h3>Places</h3>
                 <ProvinceButton provinces={DISTRICTS} />
 
-                <div className={classes.requestSection}>
+                <div className="requestSection">
                     <h3>New Place Requests</h3>
                     <NewRequestPlace></NewRequestPlace>
                     <NewRequestPlace></NewRequestPlace>
                     <NewRequestPlace></NewRequestPlace>
                 </div>
             </div>
-            <div className={classes.right}>
-                <div className={classes.rightSection}>
+            <div className="right">
+                <div className="rightSection">
                 <h3>Top Rated Places</h3>
 
                 <RightSectionPlace></RightSectionPlace>
