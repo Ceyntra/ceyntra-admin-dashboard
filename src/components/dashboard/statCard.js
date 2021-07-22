@@ -1,13 +1,13 @@
-import classes from '../../css/statcard.module.css';
+import '../../css/statcard.css';
 
 function StatCard(props){
     return(
-        <div className={classes.card}>
+        <div className="card">
           <div>
             <p>{props.text}</p>
-            <p className={classes.heading}>{props.count}</p>
+            <p className="heading">{props.count}</p>
           </div>
-          <div className={classes.iconCard}>
+          <div className="iconCard">
             {props.icon}
           </div>
         </div>

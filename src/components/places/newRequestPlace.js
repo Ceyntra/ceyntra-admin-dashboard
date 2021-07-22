@@ -1,4 +1,4 @@
-import classes from '../../css/newRequestPlace.module.css';
+import '../../css/newRequestPlace.css';
 
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
@@ -7,7 +7,7 @@ import placePic from '../../assets/images/sigiriya.jpg';
 
 function NewRequestPlace(){
     return(
-        <div className={classes.newRequestItem}>
+        <div className="newRequestItem">
             <div>
               Place Name:  <br />
               Traveller ID:  <br />
@@ -23,9 +23,9 @@ function NewRequestPlace(){
             </div>
             <div>
               <button><CheckCircleIcon style={{color:"green"}}></CheckCircleIcon> Approve</button> 
-              <button className={classes.clrSpan}><DeleteForeverIcon style={{color:"red"}}></DeleteForeverIcon> Delete</button>
+              <button className="clrSpan"><DeleteForeverIcon style={{color:"red"}}></DeleteForeverIcon> Delete</button>
             </div>
-            <div className={classes.forwardIcon}>
+            <div className="forwardIcon">
               <ForwardIcon></ForwardIcon>
             </div>
         </div>

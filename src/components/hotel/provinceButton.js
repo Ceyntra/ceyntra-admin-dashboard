@@ -1,8 +1,8 @@
-import classes from '../../css/provinceButton.module.css';
+import '../../css/provinceButton.css';
 
 function ProvinceButton(props){
     return(
-        <div className={classes.hotelsSection}>
+        <div className="hotelsSection">
             {props.provinces.map((province) => (
                 <button>{province}</button>
             ))}

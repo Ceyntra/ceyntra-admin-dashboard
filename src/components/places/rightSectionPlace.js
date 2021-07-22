@@ -1,4 +1,4 @@
-import classes from '../../css/rightSectionHotel.module.css';
+import '../../css/rightSectionHotel.css';
 
 import placePic from '../../assets/images/sigiriya.jpg';
 import Rating from '@material-ui/lab/Rating';
@@ -7,7 +7,7 @@ import Box from '@material-ui/core/Box';
 
 function RightSectionPlace(){
     return(
-        <div className={classes.topRatedHotel}>
+        <div className="topRatedHotel">
             <div>
               <Box component="fieldset" mb={0} borderColor="transparent">
                 <Typography component="legend">Chariot Path</Typography>
