@@ -7,7 +7,7 @@ import { useState, useContext } from "react";
 import axios from "../service/axios";
 import { LoginContext } from "../states/LoginContext";
 
-import classes from "../css/dashboard.module.css";
+import "../css/dashboard.css";
 import StatCard from "../components/dashboard/statCard";
 import HotelIcon from "@material-ui/icons/Hotel";
 import MapIcon from "@material-ui/icons/Map";
@@ -37,26 +37,26 @@ function Dashboard(props) {
       });
   };
 
-  useEffect(async () => {
-    if (sessionStorage.getItem("token") != null) {
-      // send user details and get back is userLoggedIn
-      await axios
-        .post(`/checkLoginStatus`, {
-          cipherText: sessionStorage.getItem("token"),
-        })
-        .then((res) => {
-          if (res.data.loginState == "1") {
-            // console.log(res.data);
-            getLoggedInUser(res.data.userId);
-          } else {
-            // console.log(res.data);
-            history.push("/forbidden");
-          }
-        });
-    } else {
-      history.push("/forbidden");
-    }
-  }, []);
+  // useEffect(async () => {
+  //   if (sessionStorage.getItem("token") != null) {
+  //     // send user details and get back is userLoggedIn
+  //     await axios
+  //       .post(`/checkLoginStatus`, {
+  //         cipherText: sessionStorage.getItem("token"),
+  //       })
+  //       .then((res) => {
+  //         if (res.data.loginState == "1") {
+  //           // console.log(res.data);
+  //           getLoggedInUser(res.data.userId);
+  //         } else {
+  //           // console.log(res.data);
+  //           history.push("/forbidden");
+  //         }
+  //       });
+  //   } else {
+  //     history.push("/forbidden");
+  //   }
+  // }, []);
 
   // get loggedin user details to the frontend
   var getLoggedInUser = async (loggedInUserId) => {
@@ -66,12 +66,12 @@ function Dashboard(props) {
   };
 
   return (
-    <div className={classes.dbContent}>
+    <div className="dbContent">
       {/* <h1>Dashboard page</h1>
       <h1>Welcome {userEmail}</h1> */}
       {/* <button onClick={logout}>Logout</button> */}
 
-      <div className={classes.countCard}>
+      <div className="countCard">
         <StatCard
           text="Travellers"
           count="13,532"
@@ -93,30 +93,30 @@ function Dashboard(props) {
           icon={<MapIcon style={{ color: "white" }} />}
         ></StatCard>
       </div>
-      <div className={classes.stat}>
-        <div className={classes.statLeft}>
-          <div className={classes.whiteBG}>
+      <div className="stat">
+        <div className="statLeft">
+          <div className="whiteBG">
             <h3>Number of Users</h3>
-            <img className={classes.whiteBGImg} src={barChart} />
+            <img className="whiteBGImg" src={barChart} />
           </div>
-          <div className={classes.whiteBG}>
+          <div className="whiteBG">
             <h3>New Places</h3>
             <NewRequestPlace></NewRequestPlace>
             <NewRequestPlace></NewRequestPlace>
             <NewRequestPlace></NewRequestPlace>
           </div>
         </div>
-        <div className={classes.statRight}>
-          <div className={classes.whiteBG}>
+        <div className="statRight">
+          <div className="whiteBG">
             <h3>Number of Users</h3>
-            <img className={classes.whiteBGImg} src={pieChart} />
+            <img className="whiteBGImg" src={pieChart} />
           </div>
-          <div className={classes.whiteBG}>
+          <div className="whiteBG">
             <h3>Most Visited Places</h3>
-            <img className={classes.whiteBGImg} src={barchart} />
-            <div className={classes.countRow}>
+            <img className="whiteBGImg" src={barchart} />
+            <div className="countRow">
               <div>
-                <div className={classes.iconOne}>
+                <div className="iconOne">
                   <PeopleIcon style={{ color: "white" }}></PeopleIcon>
                 </div>{" "}
                 Users <br />
@@ -125,7 +125,7 @@ function Dashboard(props) {
                 <hr />
               </div>
               <div>
-                <div className={classes.iconTwo}>
+                <div className="iconTwo">
                   <TouchAppIcon style={{ color: "white" }}></TouchAppIcon>
                 </div>{" "}
                 Clicks <br />
@@ -134,7 +134,7 @@ function Dashboard(props) {
                 <hr />
               </div>
               <div>
-                <div className={classes.iconThree}>
+                <div className="iconThree">
                   <MonetizationOnIcon
                     style={{ color: "white" }}
                   ></MonetizationOnIcon>
