@@ -19,6 +19,7 @@ import barChart from "../assets/images/bar-chart.png";
 import pieChart from "../assets/images/piechrt.PNG";
 import barchart from "../assets/images/barchart.png";
 import NewRequestPlace from "../components/places/newRequestPlace";
+import Graph from "../components/dashboard/Graph";
 
 function Dashboard(props) {
   const [userEmail, setuserEmail] = useState("");
@@ -97,7 +98,7 @@ function Dashboard(props) {
         <div className="statLeft">
           <div className="whiteBG">
             <h3>Number of Users</h3>
-            <img className="whiteBGImg" src={barChart} />
+            <Graph />
           </div>
           <div className="whiteBG">
             <h3>New Places</h3>
@@ -110,41 +111,6 @@ function Dashboard(props) {
           <div className="whiteBG">
             <h3>Number of Users</h3>
             <img className="whiteBGImg" src={pieChart} />
-          </div>
-          <div className="whiteBG">
-            <h3>Most Visited Places</h3>
-            <img className="whiteBGImg" src={barchart} />
-            <div className="countRow">
-              <div>
-                <div className="iconOne">
-                  <PeopleIcon style={{ color: "white" }}></PeopleIcon>
-                </div>{" "}
-                Users <br />
-                <br />
-                3.6K <br />
-                <hr />
-              </div>
-              <div>
-                <div className="iconTwo">
-                  <TouchAppIcon style={{ color: "white" }}></TouchAppIcon>
-                </div>{" "}
-                Clicks <br />
-                <br />
-                2M <br />
-                <hr />
-              </div>
-              <div>
-                <div className="iconThree">
-                  <MonetizationOnIcon
-                    style={{ color: "white" }}
-                  ></MonetizationOnIcon>
-                </div>{" "}
-                Sales <br />
-                <br />
-                $772 <br />
-                <hr />
-              </div>
-            </div>
           </div>
         </div>
       </div>

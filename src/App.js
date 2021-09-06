@@ -19,6 +19,7 @@ import Profile from "./pages/Profile";
 import { AppBar } from "@material-ui/core";
 import Forbidden from "./pages/Forbidden";
 import { LoginProvider } from "./states/LoginContext";
+import Graph from "./components/dashboard/Graph";
 
 function App() {
   return (
