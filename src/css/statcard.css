@@ -1,22 +1,36 @@
-.card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    padding: 2%;
-    /* margin-right: 3%; */
-    width: 20%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.icnCard {
+  background-image: linear-gradient(to right, #cb0c9f, #920ccb);
+  border-radius: 10px;
+  padding: 15px 15px 10px 15px;
 }
 
-.iconCard{
-    background-image: linear-gradient(to right, #cb0c9f , #920ccb);
-    border-radius: 10px;
-    padding: 15px 15px 10px 15px;
+.crd {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  height: 50px;
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.heading{
-    padding-left: 60%;
-    font-weight: bolder;
+.crd-box {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 50px;
+}
+
+.crd-cnt {
+  font-weight: bolder;
+  /* background-color: rebeccapurple; */
+}
+
+.crd-text {
+  /* background-color: red; */
+  margin-bottom: 10px;
 }

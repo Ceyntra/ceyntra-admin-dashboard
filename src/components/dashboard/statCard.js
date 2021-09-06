@@ -2,12 +2,12 @@ import "../../css/statcard.css";
 import React from "react";
 function StatCard(props) {
   return (
-    <div className="card">
-      <div>
-        <p>{props.text}</p>
-        <p className="heading">{props.count}</p>
+    <div className="crd">
+      <div className="crd-box">
+        <div className="crd-text">{props.text}</div>
+        <div className="crd-cnt">{props.count}</div>
       </div>
-      <div className="iconCard">{props.icon}</div>
+      <div className="icnCard">{props.icon}</div>
     </div>
   );
 }
