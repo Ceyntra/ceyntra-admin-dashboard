@@ -20,6 +20,7 @@ import pieChart from "../assets/images/piechrt.PNG";
 import barchart from "../assets/images/barchart.png";
 import NewRequestPlace from "../components/places/newRequestPlace";
 import Graph from "../components/dashboard/Graph";
+import GraphPie from "../components/dashboard/GraphPie";
 
 function Dashboard(props) {
   const [userEmail, setuserEmail] = useState("");
@@ -96,21 +97,21 @@ function Dashboard(props) {
       </div>
       <div className="stat">
         <div className="statLeft">
-          <div className="whiteBG">
+          <div className="whiteBG leftStat">
             <h3>Number of Users</h3>
             <Graph />
           </div>
           <div className="whiteBG">
             <h3>New Places</h3>
-            <NewRequestPlace></NewRequestPlace>
-            <NewRequestPlace></NewRequestPlace>
-            <NewRequestPlace></NewRequestPlace>
+            <NewRequestPlace />
+            <NewRequestPlace />
+            <NewRequestPlace />
           </div>
         </div>
         <div className="statRight">
-          <div className="whiteBG">
+          <div className="whiteBG rightStat">
             <h3>Number of Users</h3>
-            <img className="whiteBGImg" src={pieChart} />
+            <GraphPie />
           </div>
         </div>
       </div>
