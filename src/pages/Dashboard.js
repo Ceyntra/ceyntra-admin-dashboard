@@ -24,6 +24,7 @@ import GraphPie from "../components/dashboard/GraphPie";
 
 function Dashboard(props) {
   const [userEmail, setuserEmail] = useState("");
+  const [pageData, setpageData] = useState({});
   var history = useHistory();
 
   // logout function
@@ -59,6 +60,17 @@ function Dashboard(props) {
   //     history.push("/forbidden");
   //   }
   // }, []);
+
+  useEffect(() => {
+    getPageData();
+  }, []);
+
+  var getPageData = () => {
+    axios.get(`/getDashboardDetails`).then((res) => {
+      setpageData(res.data);
+      console.log(res.data);
+    });
+  };
 
   // get loggedin user details to the frontend
   var getLoggedInUser = async (loggedInUserId) => {
@@ -96,22 +108,28 @@ function Dashboard(props) {
         ></StatCard>
       </div>
       <div className="stat">
-        <div className="statLeft">
-          <div className="whiteBG leftStat">
+        <div className="statTopRow">
+          <div className="whiteBG leftTopStat">
             <h3>Number of Users</h3>
-            <Graph />
+            <Graph data={pageData.dateMap} />
           </div>
-          <div className="whiteBG">
-            <h3>New Places</h3>
-            <NewRequestPlace />
-            <NewRequestPlace />
-            <NewRequestPlace />
-          </div>
-        </div>
-        <div className="statRight">
-          <div className="whiteBG rightStat">
+
+          <div className="whiteBG rightTopStat">
             <h3>Number of Users</h3>
             <GraphPie />
+          </div>
+        </div>
+        <div className="statBottomRow">
+          <div className="whiteBG bottom-stat">
+            <div className="bottom-topic">
+              <h3>New Places</h3>
+            </div>
+
+            <div className="place-box">
+              <NewRequestPlace />
+              <NewRequestPlace />
+              <NewRequestPlace />
+            </div>
           </div>
         </div>
       </div>

@@ -22,7 +22,10 @@ function NewRequestPlace() {
 
           <div className="newReq-details-row">
             <div className="newReq-col">Description :</div>
-            <div className="newReq-col-ans">Thalpe Beach</div>
+            <div className="newReq-col-ans">
+              Thalpe Besddd ddddd ddddddd dddd dddd dd dsfsdf sdfsd fsdfds dsfs
+              fdsdfs ach
+            </div>
           </div>
 
           <div className="newReq-details-row">
@@ -49,9 +52,9 @@ function NewRequestPlace() {
         <div className="newReq-btn approve">Approve</div>
         <div className="newReq-btn delete">Delete</div>
       </div>
-      <div className="forwardIcon">
+      {/* <div className="forwardIcon">
         <ForwardIcon></ForwardIcon>
-      </div>
+      </div> */}
     </div>
   );
 }
