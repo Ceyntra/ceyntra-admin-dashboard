@@ -1,0 +1,191 @@
+.loginPage-container {
+  /* border: 1px solid red; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-left {
+  width: 40%;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-right {
+  width: 60%;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-signIn-container {
+  /* border: 1px solid black; */
+  width: fit-content;
+  max-width: 405px;
+  /* min-height: 600px; */
+  margin: 10px;
+}
+.ceyntra-logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  display: none;
+}
+.ceyntra-logo {
+  width: 150px;
+  height: 150px;
+}
+.login-header {
+  font-size: 50px;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #21d4fd, #2152ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.login-sub-header {
+  font-size: 15px;
+  margin-bottom: 40px;
+  color: #8392ab;
+}
+
+.login-email-container,
+.reset-pin-container {
+  margin-bottom: 30px;
+}
+
+.login-email-text,
+.reset-pin-text {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.login-email-input {
+  border: 2px solid rgb(223, 221, 221);
+  outline: none;
+  height: 40px;
+  width: 96%;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.login-password-container {
+  margin-bottom: 10px;
+}
+
+.reset-password-container {
+  margin-bottom: 40px;
+}
+
+.login-password-text {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.login-password-input {
+  border: 2px solid rgb(223, 221, 221);
+  outline: none;
+  height: 40px;
+  width: 96%;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.login-remember-me-container {
+  display: flex;
+  /* border: 1px solid black; */
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.login-remember-me-text {
+  font-size: 15px;
+  margin-left: -15px;
+}
+
+.login-clickHere {
+  background: linear-gradient(to right, #21d4fd, #2152ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-forget {
+  color: #8392ab;
+  font-size: 15px;
+}
+
+.login-error {
+  color: red;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.login-img {
+  width: 85%;
+}
+
+.login-password-input::placeholder {
+  color: rgb(177, 177, 177);
+  opacity: 1;
+  font-size: 15px;
+}
+
+.login-password-input:-ms-input-placeholder {
+  color: rgb(177, 177, 177);
+}
+
+.login-password-input::-ms-input-placeholder {
+  color: rgb(177, 177, 177);
+}
+
+.login-email-input::placeholder {
+  color: rgb(177, 177, 177);
+  opacity: 1;
+  font-size: 15px;
+}
+
+.login-email-input:-ms-input-placeholder {
+  color: rgb(177, 177, 177);
+}
+
+.login-email-input::-ms-input-placeholder {
+  color: rgb(177, 177, 177);
+}
+@media (max-width: 1300px) {
+  .login-right {
+    display: none;
+  }
+  .login-img {
+    display: none;
+  }
+
+  .login-left {
+    width: 100%;
+    overflow-y: scroll;
+  }
+  .login-right {
+    width: 0%;
+  }
+
+  .ceyntra-logo-container {
+    display: flex;
+  }
+  .login-signIn-container {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  .loginPage-container {
+    height: fit-content;
+  }
+}
+
+@media (max-width: 430px) {
+  .login-header {
+    font-size: 11vw;
+  }
+}

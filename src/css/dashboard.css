@@ -1,0 +1,100 @@
+.dbContent {
+  padding-left: 1%;
+  padding-right: 2%;
+}
+
+.countCard {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.statLeft {
+  width: 60%;
+}
+
+.statRight {
+  height: 10px;
+  width: 40%;
+  margin-left: 2%;
+}
+
+.statRight .countRow {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.whiteBG {
+  background-color: white;
+  padding: 2%;
+  /* margin: 0 5% 0 5%; */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+}
+
+.rightTopStat {
+  /* background-color: black; */
+  height: 555px;
+  width: 35%;
+}
+
+.leftTopStat {
+  /* background-color: black; */
+  height: 550px;
+  width: 55%;
+}
+
+.whiteBGImg {
+  width: 100%;
+  height: auto;
+}
+
+.iconOne {
+  display: inline;
+  padding: 10px 10px 5px 10px;
+  border-radius: 10%;
+  margin-bottom: 115px;
+  background-color: violet;
+}
+
+.iconTwo {
+  display: inline;
+  padding: 10px 10px 5px 10px;
+  border-radius: 10%;
+  margin-bottom: 115px;
+  background-color: lightskyblue;
+}
+
+.iconThree {
+  display: inline;
+  padding: 10px 10px 5px 10px;
+  border-radius: 10%;
+  margin-bottom: 115px;
+  background-color: lightsalmon;
+}
+
+.bottom-stat {
+  /* width: 100% !important; */
+  /* border: 1px solid black; */
+}
+
+.statTopRow {
+  display: flex;
+  /* border: 1px solid black; */
+  justify-content: space-between;
+}
+
+.place-box {
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+}

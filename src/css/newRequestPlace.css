@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+.newRequestItem {
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: smaller;
+}
+
+.newRequestItem button {
+  color: green;
+  display: block;
+  margin-bottom: 4px;
+  cursor: pointer;
+  border: none;
+  outline: 0;
+  min-width: 100px;
+  background-color: transparent;
+}
+
+.newRequestItem button:hover {
+  font-weight: bolder;
+}
+
+.newRequestItem .clrSpan {
+  color: red;
+}
+
+.newRequestItem img {
+  border-radius: 15px;
+}
+
+.forwardIcon {
+  background-color: #87cefa;
+  padding: 5px 5px 2px 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.forwardIcon:hover {
+  background-color: #00bfff;
+}
+
+.details-cnt {
+  display: flex;
+  gap: 20px;
+  font-size: 15px;
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-weight: 800; */
+}
+
+.newReq-details {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.newReq-details-row {
+  display: flex;
+  gap: 20px;
+}
+
+.newReq-col {
+  /* background-color: red; */
+  width: 110px;
+}
+.newReq-col-ans {
+  width: 180px;
+  /* background-color: red; */
+}
+
+.newReq-img {
+  width: 150px;
+  height: 150px;
+}
+
+.newReq-btn-cnt {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.newReq-btn {
+  width: 120px;
+  height: 40px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.approve {
+  background-color: green;
+}
+
+.approve:hover {
+  background-color: rgb(2, 145, 2);
+}
+
+.delete:hover {
+  background-color: red;
+}
+
+.delete {
+  background-color: rgb(207, 1, 1);
+}
