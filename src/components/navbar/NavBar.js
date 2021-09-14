@@ -9,8 +9,8 @@ const SideBarWrapper=styled.div `
    
     height: 90%;
     width: 250px;
-    position: fixed;
-    top: 70px;
+    /* position: fixed; */
+    /* top: 70px; */
     margin-left: 10px;
     border-radius: 20px;
     background-color: #ffffff;

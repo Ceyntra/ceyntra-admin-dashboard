@@ -7,6 +7,16 @@ body {
 .page-content{
   position: relative;
   left: 270px;
-  top: 70px;
+  margin-right: 270px;
+  flex-grow: 1;
 }
 
+.nav-bar{
+  position: fixed;
+  left: 0;
+}
+
+.content{
+  position: relative;
+  top: 70px;
+}
