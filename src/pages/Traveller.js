@@ -3,25 +3,7 @@ import {TableContainer,Grid, Table,TableHead,TableCell,TableBody,TableRow,Paper,
 import styled from 'styled-components';
 import ProfileTableView from '../components/ProfileTableView';
 import TravellerActivities from '../components/TravellerActivities';
-
-const TableDiv=styled(TableContainer) `
-
-    border-radius: 5px; 
-    margin-bottom: 50px;
-    max-height: 60vh;
-    overflow-y: scroll;
-    box-shadow: -1px 9px 6px -4px rgba(189,177,177,0.62);
-    -webkit-box-shadow: -1px 9px 6px -4px rgba(189,177,177,0.62);
-    -moz-box-shadow: -1px 9px 6px -4px rgba(189,177,177,0.62);
-`
-
-const useStyles= makeStyles({
-    container:{
-    //   border: "4px solid black",
-      padding: "0px 40px 40px",
-    
-    }
-})
+import "../css/traveller.css";
 
 
 function Traveller() {
@@ -29,13 +11,12 @@ function Traveller() {
     const [activeIndex, setactiveIndex]=useState(0);
     const [activityList,setactivityList]=useState([]);
 
-    const classes = useStyles();
-
     return (
-        <Container className={classes.container}>
+        <div className="container">
 
             {/* Traveller List */}
-                <TableDiv component={Paper}>
+            <div  className="tile">
+                <TableContainer>
                     <Table  aria-label="simple table">
                         <TableHead>
                         <TableRow >
@@ -62,105 +43,7 @@ function Traveller() {
                                 <TableCell align='center'>SriLanka</TableCell>
                                 <TableCell align='center'>Active</TableCell>
                             </TableRow>
-                            <TableRow >
-                                <TableCell align='center'><ProfileTableView imageUrl="https://image.shutterstock.com/z/stock-vector-african-bearded-man-wearing-t-shirt-hat-and-sunglasses-abstract-male-portrait-full-face-vector-1476685571.jpg" username="Michal John" useremail="micheal@gmail.com" /></TableCell>
-                                <TableCell align='center'>7529964030V</TableCell>
-                                <TableCell align='center'>+947529960</TableCell>
-                                <TableCell align='center'>SriLanka</TableCell>
-                                <TableCell align='center'>Active</TableCell>
-                            </TableRow>
-                            <TableRow>
-                            <TableCell align='center'><ProfileTableView imageUrl="https://image.shutterstock.com/z/stock-vector-african-bearded-man-wearing-t-shirt-hat-and-sunglasses-abstract-male-portrait-full-face-vector-1476685571.jpg" username="Michal John" useremail="micheal@gmail.com" /></TableCell>
-                                <TableCell align='center'>7529964030V</TableCell>
-                                <TableCell align='center'>+947529960</TableCell>
-                                <TableCell align='center'>SriLanka</TableCell>
-                                <TableCell align='center'>Active</TableCell>
-                            </TableRow>
-                            <TableRow >
-                                <TableCell align='center'><ProfileTableView imageUrl="https://image.shutterstock.com/z/stock-vector-african-bearded-man-wearing-t-shirt-hat-and-sunglasses-abstract-male-portrait-full-face-vector-1476685571.jpg" username="Michal John" useremail="micheal@gmail.com" /></TableCell>
-                                <TableCell align='center'>7529964030V</TableCell>
-                                <TableCell align='center'>+947529960</TableCell>
-                                <TableCell align='center'>SriLanka</TableCell>
-                                <TableCell align='center'>Active</TableCell>
-                            </TableRow>
-                            <TableRow>
-                            <TableCell align='center'><ProfileTableView imageUrl="https://image.shutterstock.com/z/stock-vector-african-bearded-man-wearing-t-shirt-hat-and-sunglasses-abstract-male-portrait-full-face-vector-1476685571.jpg" username="Michal John" useremail="micheal@gmail.com" /></TableCell>
-                                <TableCell align='center'>7529964030V</TableCell>
-                                <TableCell align='center'>+947529960</TableCell>
-                                <TableCell align='center'>SriLanka</TableCell>
-                                <TableCell align='center'>Active</TableCell>
-                            </TableRow>
-                            <TableRow>
-                            <TableCell align='center'><ProfileTableView imageUrl="https://image.shutterstock.com/z/stock-vector-african-bearded-man-wearing-t-shirt-hat-and-sunglasses-abstract-male-portrait-full-face-vector-1476685571.jpg" username="Michal John" useremail="micheal@gmail.com" /></TableCell>
-                                <TableCell align='center'>7529964030V</TableCell>
-                                <TableCell align='center'>+947529960</TableCell>
-                                <TableCell align='center'>SriLanka</TableCell>
-                                <TableCell align='center'>Active</TableCell>
-                            </TableRow>
-                            <TableRow >
-                                <TableCell align='center'><ProfileTableView imageUrl="https://image.shutterstock.com/z/stock-vector-african-bearded-man-wearing-t-shirt-hat-and-sunglasses-abstract-male-portrait-full-face-vector-1476685571.jpg" username="Michal John" useremail="micheal@gmail.com" /></TableCell>
-                                <TableCell align='center'>7529964030V</TableCell>
-                                <TableCell align='center'>+947529960</TableCell>
-                                <TableCell align='center'>SriLanka</TableCell>
-                                <TableCell align='center'>Active</TableCell>
-                            </TableRow>
-                            <TableRow>
-                            <TableCell align='center'><ProfileTableView imageUrl="https://image.shutterstock.com/z/stock-vector-african-bearded-man-wearing-t-shirt-hat-and-sunglasses-abstract-male-portrait-full-face-vector-1476685571.jpg" username="Michal John" useremail="micheal@gmail.com" /></TableCell>
-                                <TableCell align='center'>7529964030V</TableCell>
-                                <TableCell align='center'>+947529960</TableCell>
-                                <TableCell align='center'>SriLanka</TableCell>
-                                <TableCell align='center'>Active</TableCell>
-                            </TableRow>
-                            <TableRow >
-                                <TableCell align='center'><ProfileTableView imageUrl="https://image.shutterstock.com/z/stock-vector-african-bearded-man-wearing-t-shirt-hat-and-sunglasses-abstract-male-portrait-full-face-vector-1476685571.jpg" username="Michal John" useremail="micheal@gmail.com" /></TableCell>
-                                <TableCell align='center'>7529964030V</TableCell>
-                                <TableCell align='center'>+947529960</TableCell>
-                                <TableCell align='center'>SriLanka</TableCell>
-                                <TableCell align='center'>Active</TableCell>
-                            </TableRow>
-                            <TableRow>
-                            <TableCell align='center'><ProfileTableView imageUrl="https://image.shutterstock.com/z/stock-vector-african-bearded-man-wearing-t-shirt-hat-and-sunglasses-abstract-male-portrait-full-face-vector-1476685571.jpg" username="Michal John" useremail="micheal@gmail.com" /></TableCell>
-                                <TableCell align='center'>7529964030V</TableCell>
-                                <TableCell align='center'>+947529960</TableCell>
-                                <TableCell align='center'>SriLanka</TableCell>
-                                <TableCell align='center'>Active</TableCell>
-                            </TableRow>
-                            <TableRow>
-                            <TableCell align='center'><ProfileTableView imageUrl="https://image.shutterstock.com/z/stock-vector-african-bearded-man-wearing-t-shirt-hat-and-sunglasses-abstract-male-portrait-full-face-vector-1476685571.jpg" username="Michal John" useremail="micheal@gmail.com" /></TableCell>
-                                <TableCell align='center'>7529964030V</TableCell>
-                                <TableCell align='center'>+947529960</TableCell>
-                                <TableCell align='center'>SriLanka</TableCell>
-                                <TableCell align='center'>Active</TableCell>
-                            </TableRow>
-                            <TableRow >
-                                <TableCell align='center'><ProfileTableView imageUrl="https://image.shutterstock.com/z/stock-vector-african-bearded-man-wearing-t-shirt-hat-and-sunglasses-abstract-male-portrait-full-face-vector-1476685571.jpg" username="Michal John" useremail="micheal@gmail.com" /></TableCell>
-                                <TableCell align='center'>7529964030V</TableCell>
-                                <TableCell align='center'>+947529960</TableCell>
-                                <TableCell align='center'>SriLanka</TableCell>
-                                <TableCell align='center'>Active</TableCell>
-                            </TableRow>
-                            <TableRow>
-                            <TableCell align='center'><ProfileTableView imageUrl="https://image.shutterstock.com/z/stock-vector-african-bearded-man-wearing-t-shirt-hat-and-sunglasses-abstract-male-portrait-full-face-vector-1476685571.jpg" username="Michal John" useremail="micheal@gmail.com" /></TableCell>
-                                <TableCell align='center'>7529964030V</TableCell>
-                                <TableCell align='center'>+947529960</TableCell>
-                                <TableCell align='center'>SriLanka</TableCell>
-                                <TableCell align='center'>Active</TableCell>
-                            </TableRow>
-                            <TableRow >
-                                <TableCell align='center'><ProfileTableView imageUrl="https://image.shutterstock.com/z/stock-vector-african-bearded-man-wearing-t-shirt-hat-and-sunglasses-abstract-male-portrait-full-face-vector-1476685571.jpg" username="Michal John" useremail="micheal@gmail.com" /></TableCell>
-                                <TableCell align='center'>7529964030V</TableCell>
-                                <TableCell align='center'>+947529960</TableCell>
-                                <TableCell align='center'>SriLanka</TableCell>
-                                <TableCell align='center'>Active</TableCell>
-                            </TableRow>
-                            <TableRow>
-                            <TableCell align='center'><ProfileTableView imageUrl="https://image.shutterstock.com/z/stock-vector-african-bearded-man-wearing-t-shirt-hat-and-sunglasses-abstract-male-portrait-full-face-vector-1476685571.jpg" username="Michal John" useremail="micheal@gmail.com" /></TableCell>
-                                <TableCell align='center'>7529964030V</TableCell>
-                                <TableCell align='center'>+947529960</TableCell>
-                                <TableCell align='center'>SriLanka</TableCell>
-                                <TableCell align='center'>Active</TableCell>
-                            </TableRow>
-                            
+                        
                        
                             
                         {/* {rows.map((row) => (
@@ -176,23 +59,15 @@ function Traveller() {
                         ))} */}
                         </TableBody>
                     </Table>
-                    </TableDiv>
-              
-
-       
+                    </TableContainer>
+                    </div>
                     
                     {/* Details of a traveller */}
-                    <div>
+                    <div className="tile" >
                         <TravellerActivities />
                     </div>
 
-
-
-
-
-  
-
-        </Container>
+        </div>
     )
 }
 
