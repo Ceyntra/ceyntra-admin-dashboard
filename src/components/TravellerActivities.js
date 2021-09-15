@@ -1,6 +1,7 @@
 import React from 'react'
-import {makeStyles,Paper,Grid,Container, Typography } from '@material-ui/core';
+import {makeStyles,Paper,Container, Typography } from '@material-ui/core';
 import {Hotel} from '@material-ui/icons'
+import "../css/travellerActivities.css";
 
 const useStyles = makeStyles((theme) => ({
     
@@ -8,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(2),
       margin: 'auto',
     },
-  
+
     img: {
       height: 'inherit',
       borderRadius:'10px',
@@ -19,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
       userName:{
         fontWeight:'bold',
       },
+      
       userEmail:{
         fontSize:'14px',
       },
@@ -53,11 +55,11 @@ function TravellerActivities() {
     return (
         <div className={classes.root}>
 
-        <Paper className={classes.paper}>
+        {/* <Paper className={classes.paper}> */}
 
-          <Grid container spacing={12}>
+          <div  className="flexBoxContainer">
 
-            <Grid item lg={2} xs={1} md={2} >
+            <div className="userBox">
                 <Container>
                     <img className={classes.img} alt="Profile img" src="https://image.shutterstock.com/z/stock-vector-african-bearded-man-wearing-t-shirt-hat-and-sunglasses-abstract-male-portrait-full-face-vector-1476685571.jpg" />
                     <div className={classes.dataBody}> 
@@ -67,11 +69,9 @@ function TravellerActivities() {
                         </Typography>
                     </div>
                 </Container>
-            </Grid>
+            </div>
 
-            <Grid item xs={12} md={10} sm container>
-
-              <Grid item xs container direction="column" spacing={2}>
+            <div className="activityBox">
              
                   <Typography gutterBottom variant="subtitle1">
                     Recent Activities
@@ -108,11 +108,11 @@ function TravellerActivities() {
                     <div><Hotel className={classes.icon}/></div>
                 </Paper>
 
-              </Grid>
+              </div>
              
-            </Grid>
-          </Grid>
-        </Paper>
+        
+          </div>
+        {/* </Paper> */}
       </div>
     )
 }
