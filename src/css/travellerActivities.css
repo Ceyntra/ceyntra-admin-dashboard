@@ -1,0 +1,13 @@
+.flexBoxContainer{
+    display:flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.userBox{
+     flex: 1;
+}
+
+.activityBox{
+    flex: 5;
+}
