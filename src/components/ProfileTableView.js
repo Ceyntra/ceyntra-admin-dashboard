@@ -6,11 +6,9 @@ import styled from 'styled-components';
 const useStyles= makeStyles((theme) => ({
     profileBox:{
       position: 'relative',
-      display: 'grid',
-      gridTemplateColumns:'30% 70%',
+      display: 'flex',
       height: '50px',
-      width: '200px',
-      padding: '0',
+      // border: "4px solid black",
     },
     profilePic:{
       height: 'inherit',
@@ -20,11 +18,14 @@ const useStyles= makeStyles((theme) => ({
     },
     dataBody:{
       height: 'inherit',
+      paddingLeft:'10px',
     },
     userName:{
       fontWeight:'bold',
     },
     userEmail:{
+
+      
       fontSize:'14px',
     },
 }))
