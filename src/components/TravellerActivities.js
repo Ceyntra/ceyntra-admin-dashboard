@@ -1,6 +1,6 @@
 import React from 'react'
 import {makeStyles,Paper,Container, Typography } from '@material-ui/core';
-import {Hotel} from '@material-ui/icons'
+import {Hotel,LocalTaxi,EmojiPeople} from '@material-ui/icons'
 import "../css/travellerActivities.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -49,8 +49,11 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-function TravellerActivities() {
+function TravellerActivities({activityList,image,name,email}) {
+
     const classes = useStyles();
+
+    
     
     return (
         <div className={classes.root}>
@@ -61,11 +64,11 @@ function TravellerActivities() {
 
             <div className="userBox">
                 <Container>
-                    <img className={classes.img} alt="Profile img" src="https://image.shutterstock.com/z/stock-vector-african-bearded-man-wearing-t-shirt-hat-and-sunglasses-abstract-male-portrait-full-face-vector-1476685571.jpg" />
+                    <img className={classes.img} alt="Profile img" src={image} />
                     <div className={classes.dataBody}> 
-                        <Typography className={classes.userName} align='left' >{'username'}</Typography>
+                        <Typography className={classes.userName} align='left' >{name}</Typography>
                         <Typography className={classes.userEmail} align='left' variant="subtitle1" color="textSecondary">
-                        {'useremail'}
+                        {email}
                         </Typography>
                     </div>
                 </Container>
@@ -77,36 +80,14 @@ function TravellerActivities() {
                     Recent Activities
                   </Typography>
 
-                <Paper className={classes.activityRow}>
-                    <div>Hilton Hotel</div>
-                    <div>12/06/2021</div>
-                    <div>5:42 PM</div>
-                    <div><Hotel className={classes.icon}/></div>
-                </Paper>
-                <Paper className={classes.activityRow}>
-                    <div>Hilton Hotel</div>
-                    <div>12/06/2021</div>
-                    <div>5:42 PM</div>
-                    <div><Hotel className={classes.icon}/></div>
-                </Paper>
-                <Paper className={classes.activityRow}>
-                    <div>Hilton Hotel</div>
-                    <div>12/06/2021</div>
-                    <div>5:42 PM</div>
-                    <div><Hotel className={classes.icon}/></div>
-                </Paper>
-                <Paper className={classes.activityRow}>
-                    <div>Hilton Hotel</div>
-                    <div>12/06/2021</div>
-                    <div>5:42 PM</div>
-                    <div><Hotel className={classes.icon}/></div>
-                </Paper>
-                <Paper className={classes.activityRow}>
-                    <div>Hilton Hotel</div>
-                    <div>12/06/2021</div>
-                    <div>5:42 PM</div>
-                    <div><Hotel className={classes.icon}/></div>
-                </Paper>
+                  {activityList.map((activity) => {                                    
+                      return (<Paper className={classes.activityRow}>
+                                      <div>{activity['spName']}</div>
+                                      <div>{activity['date']}</div>
+                                      <div>{activity['time']}</div>
+                                      <div> { activity['packageType'] == "taxi" ? <LocalTaxi className={classes.icon}/> : activity['packageType'] == "hotel" ? <Hotel className={classes.icon}/> : <EmojiPeople className={classes.icon}/>   } </div>
+                        </Paper>);
+                    })}
 
               </div>
              

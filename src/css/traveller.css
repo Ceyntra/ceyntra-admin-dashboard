@@ -28,4 +28,18 @@
 
 }
 
+.searchInput{
+    flex-grow: inherit;
+    outline: none;
+    background-color: inherit;
+    border: none;
+    width: 500px;
+    height: 20px;
+}
+
+.searchComponent{
+    display: flex;
+    
+}
+
 
