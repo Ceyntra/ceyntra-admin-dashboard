@@ -10,6 +10,7 @@ import Places from "./pages/Places";
 import TravelPlaces from "./pages/TravelPlaces";
 import Service from "./pages/Service";
 import Hotel from "./pages/Hotel";
+import HotelList from "./pages/HotelList";
 import Taxi from "./pages/Taxi";
 import Guide from "./pages/Guide";
 import Message from "./pages/Message";
@@ -18,6 +19,8 @@ import { AppBar } from "@material-ui/core";
 import Forbidden from "./pages/Forbidden";
 import { LoginProvider } from "./states/LoginContext";
 import Graph from "./components/dashboard/Graph";
+import DistrictHotels from "./pages/DistrictHotels";
+import Requests from "./pages/Requests";
 
 
 function App() {
@@ -38,7 +41,10 @@ function App() {
                   <Route exact path="/home/travellers" component={Traveller} />
                   <Route path="/home/places" component={TravelPlaces} />
                   <Route path="/home/services" component={Service} />
-                  <Route path="/home/hotels" component={Hotel} />
+                  <Route exact path="/home/hotels" component={Hotel} />
+                  <Route path="/home/hotels/list" component={HotelList} />
+                  <Route path="/home/hotels/requests" component={Requests} />
+                  <Route path="/home/hotels/:province" component={DistrictHotels} />
                   <Route path="/home/taxis" component={Taxi} />
                   <Route path="/home/guides" component={Guide} />
                   <Route path="/home/messages" component={Message} />
