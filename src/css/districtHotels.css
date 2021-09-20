@@ -28,7 +28,7 @@
     margin-bottom: 20px;
 }
 
-input[type=text] {
+.filter-bar input[type=text] {
     width: 500px;
     border: none;
     border-bottom: 1px solid black;
