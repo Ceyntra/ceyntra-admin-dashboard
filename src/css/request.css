@@ -1,0 +1,58 @@
+.request-content{
+    background-color: white;
+    padding: 1% 15% 1% 15%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 2% 0 1%;
+}
+
+.request-card{
+    /* background-color: #f0f8ff; */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: smaller;
+    flex: 1;
+    word-wrap: break-word;
+    border: 1px solid rgb(220,220,220);
+}
+
+.approve-button{
+    background-color: green;
+    min-width: 100px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.approve-button:hover{
+    background-color: darkgreen;
+}
+
+.reject-button{
+    background-color: red;
+    min-width: 100px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.reject-button:hover{
+    background-color: darkred;
+}
+
+.span-value{
+    color: rgb(119,136,153);
+    margin-left: 5px;
+}
