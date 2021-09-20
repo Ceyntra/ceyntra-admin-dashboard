@@ -41,6 +41,7 @@ function NewRequestHotel(props) {
           icon: 'success',
           text: 'Account Rejected!',
         })
+        // window.location.reload(false);
       }else{
         Swal.fire({
           icon: 'error',

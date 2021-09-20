@@ -6,6 +6,7 @@ import '../css/districtHotels.css';
 import Rating from "@material-ui/lab/Rating";
 import Box from "@material-ui/core/Box";
 import FilterSearchBar from '../components/FilterSearchBar';
+import Swal from 'sweetalert2';
 
 const useStyles= makeStyles((theme) => ({
     headingTopics:{
@@ -28,6 +29,23 @@ function DistrictHotels(props) {
 
     const [searchedWord, setSearchedWord]=useState("");
     const [searchedResult, setSearchedResult] = useState([]);
+
+    function bannedHandler(id){
+        axios.post(`/bannedHotel/${id}`).then((result) => {
+            if(result.data==1){
+                Swal.fire({
+                    icon: 'success',
+                    text: 'Hotel Banned Successfully!',
+                })
+                // window.location.reload(false);
+            }else{
+                Swal.fire({
+                    icon: 'error',
+                    text: 'Ban Failed!',
+                })
+            }
+        });
+    }
 
     const filterHandler=(term)=>{
         if(term !== ""){
@@ -95,7 +113,7 @@ function DistrictHotels(props) {
                                                 <Box sx={{ ml: 0.5 }}>{hotel['hotel']['rating']}</Box>
                                             </Box>
                                         </TableCell>
-                                        <TableCell align='center'><button className="ban-button">Ban</button></TableCell>
+                                        <TableCell align='center'><button className="ban-button" onClick={() => bannedHandler(hotel['hotel']['hotel_id'])}>Ban</button></TableCell>
                                     </TableRow>
                                 ))}
                                 </TableBody>
