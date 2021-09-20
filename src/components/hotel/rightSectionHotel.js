@@ -4,18 +4,28 @@ import placePic from "../../assets/images/h4.jpg";
 import Rating from "@material-ui/lab/Rating";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
+import {Avatar, makeStyles} from '@material-ui/core';
 
-function RightSectionHotel() {
+const useStyles= makeStyles((theme) => ({
+  hotelPhoto:{
+    minHeight: '50px',
+    minWidth: '50px',
+  }
+}))
+
+function RightSectionHotel(props) {
+  const classes = useStyles();
+
   return (
     <div className="topRatedHotel">
       <div>
         <Box component="fieldset" mb={0} borderColor="transparent">
-          <Typography component="legend">Jetwing Hotel</Typography>
-          <Rating name="read-only" value="2" readOnly />
+          <Typography component="legend">{props.name}</Typography>
+          <Rating name="read-only" value={props.rating} readOnly />
         </Box>
       </div>
       <div>
-        <img src={placePic} width="60px" height="60px" />
+        <Avatar className={classes.hotelPhoto} alt="profile" variant="rounded" src={props.photo} />
       </div>
     </div>
   );

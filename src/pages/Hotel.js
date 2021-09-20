@@ -19,19 +19,28 @@ function Hotel() {
   const history = useHistory()
   const [hotelCount, setHotelCount]=useState(0);
   const [requestCount, setRequestCount]=useState(0);
+  const [topHotelList, setTopHotelList]=useState([]);
 
   function hotelListHandler(){
     history.push('hotels/list');
   }
 
   function requestListHandler(){
-    history.push('hotels/requests');
+    history.push({
+      pathname:'hotels/requests',
+      state:{
+        data: 1,
+        newCount: requestCount
+      }
+    }
+    );
   }
 
   var getHotelData = () => {
     axios.get(`/getHotelsCount`).then((res) => {
       setHotelCount(res.data[0]);
       setRequestCount(res.data[1]);
+      setTopHotelList(res.data[2]);
     });
   };
 
@@ -62,12 +71,13 @@ function Hotel() {
       <div className="right">
         <div className="rightSection">
           <h3>Top Rated Hotels</h3>
-
-          <RightSectionHotel></RightSectionHotel>
-          <RightSectionHotel></RightSectionHotel>
-          <RightSectionHotel></RightSectionHotel>
-          <RightSectionHotel></RightSectionHotel>
-          <RightSectionHotel></RightSectionHotel>
+          {
+            topHotelList.length==0
+              ? <p>No hotels yet</p>
+              : topHotelList.map((topHotel) => (
+                  <RightSectionHotel name={topHotel[0]} rating={topHotel[1]} photo={topHotel[2]}></RightSectionHotel>
+              ))
+          }
         </div>
 
         <div className="rightSection">
