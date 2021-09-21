@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import {Card,CardMedia,CardContent, Typography, CardActions,ButtonBase,InputLabel,Button } from '@material-ui/core'
 import {Remove} from "@material-ui/icons";
 import { storage } from "../firebase";
@@ -7,12 +7,17 @@ import '../css/addNewPlace.css';
 
 
 
-function ImagePicker({setImageURL}) {
+function ImagePicker({setImageURL,isSubmit}) {
 
 
     const [image, setImage] = useState(null);
     const [url, setUrl] = useState("");
     const [progress, setProgress] = useState(0);
+    const [formSubmitted,setFormSubmitted] =useState(isSubmit);
+
+    useEffect(() => {
+      setImage(null);
+    }, [isSubmit])
   
     const handleChange = e => {
       if (e.target.files[0]) {

@@ -64,6 +64,10 @@ function AddNewPlaces() {
                 .then((response) =>{
                     if(response.status==200){
                         setSuccess(true);
+                        setPlaceName('');
+                        setPlaceDesc('');
+                        setPlaceLat('');
+                        setPlaceLon('')
                     }
                 } 
             );
@@ -96,19 +100,19 @@ function AddNewPlaces() {
                         { success ? <h3 className="success">Place Added success!</h3> : ''}
                     <form>
                         <h3>Place Name</h3>
-                        <TextField className="input-field" id="placeName" label="Place Name"  variant="outlined" onChange={(e)=>{ setPlaceName(e.target.value) }}/>
+                        <TextField className="input-field" id="placeName" label="Place Name"  value={placeName} variant="outlined" onChange={(e)=>{ setPlaceName(e.target.value) }}/>
                 
                         <h3>Place Description</h3>
-                        <TextField className="input-field"  multiline rows={4} id="placeDesc" label="Description" variant="outlined" onChange={(e)=>{ 
+                        <TextField className="input-field"  multiline rows={4} id="placeDesc" value={placeDesc} label="Description" variant="outlined" onChange={(e)=>{ 
                             console.log(e.target.value);
                             setPlaceDesc(e.target.value) 
                             }}/>
                 
                         <h3>Location Latitude</h3>
-                        <TextField className="input-field" id="LocationLat" label="Location Latitude"  variant="outlined" onChange={(e)=>{ setPlaceLat(e.target.value) }}/>
+                        <TextField className="input-field" id="LocationLat" label="Location Latitude" value={placeLat}  variant="outlined" onChange={(e)=>{ setPlaceLat(e.target.value) }}/>
                 
                         <h3>Location Longitude</h3>
-                        <TextField className="input-field" id="LocationLon" label="Location Longitude"  variant="outlined" onChange={(e)=>{ setPlaceLon(e.target.value) }}/>
+                        <TextField className="input-field" id="LocationLon" label="Location Longitude" value={placeLon} variant="outlined" onChange={(e)=>{ setPlaceLon(e.target.value) }}/>
                 
 
                         <h3>Add Place</h3>
@@ -124,15 +128,15 @@ function AddNewPlaces() {
 
                 <div className="uploader-container">
 
-               
-                    <ImagePicker setImageURL={setImage1URL}/>
+                <h3>Location Latitude</h3>
+                    <ImagePicker setImageURL={setImage1URL} isSubmit={success}/>
                     
            
        
-                    <ImagePicker setImageURL={setImage2URL}/>
+                    <ImagePicker setImageURL={setImage2URL} isSubmit={success}/>
 
               
-                    <ImagePicker setImageURL={setImage3URL}/>
+                    <ImagePicker setImageURL={setImage3URL} isSubmit={success}/>
 
                 </div>
             </div>
