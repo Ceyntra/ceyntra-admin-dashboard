@@ -7,6 +7,7 @@ import NavBar from "./components/navbar/NavBar";
 import TopBar from "./components/navbar/TopBar";
 import Traveller from "./pages/Traveller";
 import Places from "./pages/Places";
+import AddNewPlaces  from "./pages/AddNewPlaces";
 import TravelPlaces from "./pages/TravelPlaces";
 import Service from "./pages/Service";
 import Hotel from "./pages/Hotel";
@@ -40,6 +41,7 @@ function App() {
                   <Route exact path="/home" component={Dashboard} />
                   <Route exact path="/home/travellers" component={Traveller} />
                   <Route path="/home/places" component={TravelPlaces} />
+                  <Route path="/home/newplace" component={AddNewPlaces} />
                   <Route path="/home/services" component={Service} />
                   <Route exact path="/home/hotels" component={Hotel} />
                   <Route path="/home/hotels/list" component={HotelList} />
