@@ -43,6 +43,7 @@ function HotelList(){
                         <FilterSearchBar
                             filterFunction={filterHandler}
                             term={searchedWord}
+                            word='hotel'
                         />
                         <table>
                             <thead>
