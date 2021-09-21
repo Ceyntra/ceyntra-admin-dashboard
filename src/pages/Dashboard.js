@@ -81,6 +81,7 @@ function Dashboard(props) {
 
   return (
     <div className="dbContent">
+      {console.log(pageData)}
       {/* <h1>Dashboard page</h1>
       <h1>Welcome {userEmail}</h1> */}
       {/* <button onClick={logout}>Logout</button> */}
@@ -88,22 +89,22 @@ function Dashboard(props) {
       <div className="countCard">
         <StatCard
           text="Travellers"
-          count="13,532"
+          count={pageData.numOfTravellers}
           icon={<PeopleIcon style={{ color: "white" }} />}
         ></StatCard>
         <StatCard
           text="Hotels"
-          count="315"
+          count={pageData.numOfHotels}
           icon={<HotelIcon style={{ color: "white" }} />}
         ></StatCard>
         <StatCard
           text="Taxi Drivers"
-          count="135"
+          count={pageData.numOfTaxiDrivers}
           icon={<LocalTaxiIcon style={{ color: "white" }} />}
         ></StatCard>
         <StatCard
           text="Guides"
-          count="225"
+          count={pageData.numOfGuides}
           icon={<MapIcon style={{ color: "white" }} />}
         ></StatCard>
       </div>
@@ -126,9 +127,28 @@ function Dashboard(props) {
             </div>
 
             <div className="place-box">
+              {pageData.notAddedPlaces != null ? (
+                pageData.notAddedPlaces.map((place) => {
+                  return (
+                    <NewRequestPlace
+                      placeName={place.place_name}
+                      placeId={place.place_id}
+                      desc={place.description}
+                      addedDate={place.added_date_time}
+                      latitude={place.latitude}
+                      longitude={place.longitude}
+                      photo={place.photo}
+                      district={place.district}
+                      getPageData={getPageData}
+                    />
+                  );
+                })
+              ) : (
+                <div>Blaaa</div>
+              )}
+              {/* <NewRequestPlace />
               <NewRequestPlace />
-              <NewRequestPlace />
-              <NewRequestPlace />
+              <NewRequestPlace /> */}
             </div>
           </div>
         </div>
