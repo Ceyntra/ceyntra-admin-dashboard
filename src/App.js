@@ -20,11 +20,9 @@ import Forbidden from "./pages/Forbidden";
 import { LoginProvider } from "./states/LoginContext";
 import Graph from "./components/dashboard/Graph";
 import DistrictHotels from "./pages/DistrictHotels";
-import Requests from "./pages/Requests";
-
+// import Requests from "./pages/Requests";
 
 function App() {
-
   return (
     <div className="App">
       <LoginProvider>
@@ -43,8 +41,11 @@ function App() {
                   <Route path="/home/services" component={Service} />
                   <Route exact path="/home/hotels" component={Hotel} />
                   <Route path="/home/hotels/list" component={HotelList} />
-                  <Route path="/home/hotels/requests" component={Requests} />
-                  <Route path="/home/hotels/:province" component={DistrictHotels} />
+                  {/* <Route path="/home/hotels/requests" component={Requests} /> */}
+                  <Route
+                    path="/home/hotels/:province"
+                    component={DistrictHotels}
+                  />
                   <Route path="/home/taxis" component={Taxi} />
                   <Route path="/home/guides" component={Guide} />
                   <Route path="/home/messages" component={Message} />
