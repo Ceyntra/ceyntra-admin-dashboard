@@ -15,7 +15,7 @@ function FilterSearchBar(props) {
                 <Search  />
             </div>  
             <form noValidate autoComplete="off" >
-                <input classname="input-field" type="text" id="outlined-basic"  variant="outlined" placeholder="Search hotel here..."  size="small" fullWidth 
+                <input classname="input-field" type="text" id="outlined-basic"  variant="outlined" placeholder={'Search '+props.word+' here...'}  size="small" fullWidth 
                     onChange={getSearchedWord}
                     ref={inputEl}
                 />

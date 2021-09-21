@@ -80,6 +80,7 @@ function DistrictHotels(props) {
                         <FilterSearchBar
                             filterFunction={filterHandler}
                             term={searchedWord}
+                            word='hotel'
                         />
                         <TableContainer classes={{root: classes.customTableContainer}}>
                             <Table  aria-label="simple table" stickyHeader>

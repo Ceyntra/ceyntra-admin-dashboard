@@ -89,7 +89,7 @@ function Hotel() {
           </div>
 
           <h3>Hotels</h3>
-          <ProvinceButton provinces={PROVINCES} />
+          <ProvinceButton page='hotels' provinces={PROVINCES} />
         </div>
         
         <div className="right">
