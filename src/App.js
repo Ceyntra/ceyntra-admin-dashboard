@@ -24,6 +24,8 @@ import DistrictHotels from "./pages/DistrictHotels";
 import Requests from "./pages/Requests";
 import TaxiList from "./pages/TaxiList";
 import DistrictTaxis from "./pages/DistrictTaxis";
+import GuideList from "./pages/GuideList";
+import DistrictGuides from "./pages/DistrictGuides";
 
 
 function App() {
@@ -53,7 +55,10 @@ function App() {
                   <Route path="/home/taxis/list" component={TaxiList} />
                   <Route path="/home/taxis/requests" component={Requests} />
                   <Route path="/home/taxis/:province" component={DistrictTaxis} />
-                  <Route path="/home/guides" component={Guide} />
+                  <Route exact path="/home/guides" component={Guide} />
+                  <Route path="/home/guides/list" component={GuideList} />
+                  <Route path="/home/guides/requests" component={Requests} />
+                  <Route path="/home/guides/:province" component={DistrictGuides} />
                   <Route path="/home/messages" component={Message} />
                   <Route path="/home/profile" component={Profile} />
                 </Switch>
