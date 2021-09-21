@@ -128,7 +128,7 @@ function AddNewPlaces() {
 
                 <div className="uploader-container">
 
-                <h3>Location Latitude</h3>
+                <h3>Images</h3>
                     <ImagePicker setImageURL={setImage1URL} isSubmit={success}/>
                     
            
