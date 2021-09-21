@@ -7,7 +7,7 @@ import NavBar from "./components/navbar/NavBar";
 import TopBar from "./components/navbar/TopBar";
 import Traveller from "./pages/Traveller";
 import Places from "./pages/Places";
-import AddNewPlaces  from "./pages/AddNewPlaces";
+import AddNewPlaces from "./pages/AddNewPlaces";
 import TravelPlaces from "./pages/TravelPlaces";
 import Service from "./pages/Service";
 import Hotel from "./pages/Hotel";
@@ -27,9 +27,7 @@ import DistrictTaxis from "./pages/DistrictTaxis";
 import GuideList from "./pages/GuideList";
 import DistrictGuides from "./pages/DistrictGuides";
 
-
 function App() {
-
   return (
     <div className="App">
       <LoginProvider>
@@ -50,7 +48,10 @@ function App() {
                   <Route exact path="/home/hotels" component={Hotel} />
                   <Route path="/home/hotels/list" component={HotelList} />
                   <Route path="/home/hotels/requests" component={Requests} />
-                  <Route path="/home/hotels/:province" component={DistrictHotels} />
+                  <Route
+                    path="/home/hotels/:province"
+                    component={DistrictHotels}
+                  />
                   <Route exact path="/home/taxis" component={Taxi} />
                   <Route path="/home/taxis/list" component={TaxiList} />
                   <Route path="/home/taxis/requests" component={Requests} />

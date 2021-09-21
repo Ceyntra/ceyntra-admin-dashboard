@@ -3,6 +3,7 @@ import axios from "../service/axios";
 import NewRequestHotel from "../components/hotel/newRequestHotel";
 import '../css/request.css';
 import NewRequestTaxi from '../components/taxi/newRequestTaxi';
+import NewRequestGuide from '../components/guide/newRequestGuide';
 
 function Requests(props){
     const { data } = props.location.state;
@@ -67,7 +68,26 @@ function Requests(props){
         );
     }else{
         return(
-            <div>hghg</div>
+            <div className="request-content">
+                {
+                    requestList.length==0 
+                        ? <h2>No new requests to be displayed yet...</h2>
+                        : requestList.map((guideRequest) => (
+                            <NewRequestGuide
+                                id={guideRequest['userAndGuideModel']['guide']['guide_id']}
+                                name={guideRequest['userAndGuideModel']['guide']['first_name']+' '+guideRequest['userAndGuideModel']['guide']['last_name']}
+                                district={guideRequest['userAndGuideModel']['guide']['district']}
+                                nic={guideRequest['userAndGuideModel']['guide']['nic']}
+                                photo={guideRequest['userAndGuideModel']['guide']['profile_photo']}
+                                price={guideRequest['userAndGuideModel']['guide']['per_day_price']}
+                                state={guideRequest['userAndGuideModel']['guide']['vehicle_state']}
+                                email={guideRequest['userAndGuideModel']['contact']['email']}
+                                telephone={guideRequest['userAndGuideModel']['contact']['telephone']}
+                            >
+                            </NewRequestGuide>
+                        ))
+                }
+            </div>
         );
     }
 }
