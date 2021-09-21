@@ -21,6 +21,8 @@ import { LoginProvider } from "./states/LoginContext";
 import Graph from "./components/dashboard/Graph";
 import DistrictHotels from "./pages/DistrictHotels";
 import Requests from "./pages/Requests";
+import TaxiList from "./pages/TaxiList";
+import DistrictTaxis from "./pages/DistrictTaxis";
 
 
 function App() {
@@ -45,7 +47,10 @@ function App() {
                   <Route path="/home/hotels/list" component={HotelList} />
                   <Route path="/home/hotels/requests" component={Requests} />
                   <Route path="/home/hotels/:province" component={DistrictHotels} />
-                  <Route path="/home/taxis" component={Taxi} />
+                  <Route exact path="/home/taxis" component={Taxi} />
+                  <Route path="/home/taxis/list" component={TaxiList} />
+                  <Route path="/home/taxis/requests" component={Requests} />
+                  <Route path="/home/taxis/:province" component={DistrictTaxis} />
                   <Route path="/home/guides" component={Guide} />
                   <Route path="/home/messages" component={Message} />
                   <Route path="/home/profile" component={Profile} />
