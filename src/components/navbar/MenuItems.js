@@ -10,6 +10,7 @@ import {
   Build,
   Message,
   Person,
+  Add,
 } from "@material-ui/icons";
 // import NavItem  from './NavItem';
 import React from "react";
@@ -31,6 +32,12 @@ const menuItems = [
     icon: <Place />,
     active: false,
     link: "/home/places",
+  },
+  {
+    title: "Add Places",
+    icon: <Add/>,
+    active: false,
+    link: "/home/newplace",
   },
   {
     title: "Services",
