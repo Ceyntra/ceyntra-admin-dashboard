@@ -8,7 +8,7 @@ function ProvinceButton(props) {
       {props.provinces.map((province) => (
         <Link
           to={{
-            pathname: `/home/hotels/${province}`,
+            pathname: `/home/${props.page}/${province}`,
             state: {
               data: province
             }

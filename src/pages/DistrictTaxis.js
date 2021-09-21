@@ -22,20 +22,20 @@ const useStyles= makeStyles((theme) => ({
     }
 }))
 
-function DistrictHotels(props) {
+function DistrictTaxis(props) {
     const { data } = props.location.state;
-    const [hotels, setHotels] = useState([]);
+    const [taxis, setTaxis] = useState([]);
     const classes = useStyles();
 
     const [searchedWord, setSearchedWord]=useState("");
     const [searchedResult, setSearchedResult] = useState([]);
 
     function bannedHandler(id){
-        axios.post(`/bannedHotel/${id}`).then((result) => {
+        axios.post(`/bannedTaxi/${id}`).then((result) => {
             if(result.data==1){
                 Swal.fire({
                     icon: 'success',
-                    text: 'Hotel Banned Successfully!',
+                    text: 'Driver Banned Successfully!',
                 })
                 // window.location.reload(false);
             }else{
@@ -50,71 +50,71 @@ function DistrictHotels(props) {
     const filterHandler=(term)=>{
         if(term !== ""){
             setSearchedWord(term.toLowerCase());
-            const newHotelList= hotels.filter((hotel) =>{
-                return hotel['hotel']['name'].toLowerCase().startsWith(term)
+            const newTaxiList= taxis.filter((taxi) =>{
+                return taxi['taxiDriver']['first_name'].toLowerCase().startsWith(term)
             })
-            setSearchedResult(newHotelList);
+            setSearchedResult(newTaxiList);
         }else{
-            setSearchedResult(hotels);
+            setSearchedResult(taxis);
         }
     }
 
-    var getHotels = () => {
-        axios.get(`/getHotels/${data}`).then((result) => {
-          setHotels(result.data);
+    var getTaxis = () => {
+        axios.get(`/getTaxis/${data}`).then((result) => {
+          setTaxis(result.data);
           setSearchedResult(result.data);
         });
     };
     
     useEffect(() => {
-        getHotels();
+        getTaxis();
     }, []);
 
     return(
         <div className="table-content">
             {
-                hotels.length==0 
-                    ? <h2>No hotels to be displayed yet...</h2>
+                taxis.length==0 
+                    ? <h2>No taxis to be displayed yet...</h2>
                     : 
                     <div>
                         <FilterSearchBar
                             filterFunction={filterHandler}
                             term={searchedWord}
-                            word='hotel'
+                            word='driver'
                         />
                         <TableContainer classes={{root: classes.customTableContainer}}>
                             <Table  aria-label="simple table" stickyHeader>
                                 <TableHead>
                                     <TableRow>
-                                        <TableCell className={classes.headingTopics} align='left' width="30%">HOTEL</TableCell>
-                                        <TableCell className={classes.headingTopics} align='left' width="13%">HOTEL ID</TableCell>
-                                        <TableCell className={classes.headingTopics} align='left' width="20%">REGISTRATION NO.</TableCell>
+                                        <TableCell className={classes.headingTopics} align='left' width="30%">DRIVER</TableCell>
+                                        <TableCell className={classes.headingTopics} align='left' width="12%">DRIVER ID</TableCell>
+                                        <TableCell className={classes.headingTopics} align='left' width="20%">LICENSE NO.</TableCell>
                                         <TableCell className={classes.headingTopics} align='left' width="15%">CONTACT</TableCell>
-                                        {/* <TableCell className={classes.headingTopics} align='center'>HOTEL DESCRIPTION</TableCell> */}
-                                        <TableCell className={classes.headingTopics} align='left' width="17%">RATING</TableCell>
+                                        <TableCell className={classes.headingTopics} align='left' width="5%">CHARGE/KM</TableCell>
+                                        <TableCell className={classes.headingTopics} align='left' width="13%">RATING</TableCell>
                                         <TableCell className={classes.headingTopics} align='center' width="5%">ACTION</TableCell>
                                     </TableRow>
                                 </TableHead>
 
                                 <TableBody>
-                                {searchedResult.map((hotel) => (
-                                    <TableRow key={hotel['hotel']['hotel_id']}>
-                                        <TableCell align='justify'><ProfileTableView imageUrl={hotel['hotel']['profile_photo']} username={hotel['hotel']['name']} useremail={hotel['contact']['email']} /></TableCell>
-                                        <TableCell align='justify'>{hotel['hotel']['hotel_id']}</TableCell>
-                                        <TableCell align='justify'>{hotel['hotel']['registration_number']}</TableCell>
-                                        <TableCell align='justify'>{hotel['contact']['telephone']}</TableCell>
-                                        {/* <TableCell align='center'>{hotel['hotel']['description']}</TableCell> */}
+                                {searchedResult.map((taxi) => (
+                                    <TableRow key={taxi['taxiDriver']['taxi_driver_id']}>
+                                        <TableCell align='justify'><ProfileTableView imageUrl={taxi['taxiDriver']['profile_photo']} username={taxi['taxiDriver']['first_name']+' '+taxi['taxiDriver']['last_name']} useremail={taxi['contact']['email']} /></TableCell>
+                                        <TableCell align='justify'>{taxi['taxiDriver']['taxi_driver_id']}</TableCell>
+                                        <TableCell align='justify'>{taxi['taxiDriver']['driver_license']}</TableCell>
+                                        <TableCell align='justify'>{taxi['contact']['telephone']}</TableCell>
+                                        <TableCell align='justify'>{taxi['taxiDriver']['per_km_price']} LKR</TableCell>
                                         <TableCell align='justify'>
                                             <Box
                                                 sx={{ 
                                                     display: 'flex',  
                                                 }}
                                             >
-                                                <Rating name="read-only" value={hotel['hotel']['rating']} size="small" readOnly />
-                                                <Box sx={{ ml: 0.5 }}>{hotel['hotel']['rating']}</Box>
+                                                <Rating name="read-only" value={taxi['taxiDriver']['rating']} size="small" readOnly />
+                                                <Box sx={{ ml: 0.5 }}>{taxi['taxiDriver']['rating']}</Box>
                                             </Box>
                                         </TableCell>
-                                        <TableCell align='center'><button className="ban-button" onClick={() => bannedHandler(hotel['hotel']['hotel_id'])}>Ban</button></TableCell>
+                                        <TableCell align='center'><button className="ban-button" onClick={() => bannedHandler(taxi['taxiDriver']['taxi_driver_id'])}>Ban</button></TableCell>
                                     </TableRow>
                                 ))}
                                 </TableBody>
@@ -126,4 +126,4 @@ function DistrictHotels(props) {
     );
 }
 
-export default DistrictHotels;
+export default DistrictTaxis;

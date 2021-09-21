@@ -1,0 +1,85 @@
+.content{
+    display: flexbox;
+    
+}
+
+.place-form{
+    display: flex;
+    
+}
+
+
+.oneDistrict{
+    margin: 10px;
+    height: auto;
+    width: auto;
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.districts{
+    height: auto;
+    /* max-height: 450px; */
+    max-width: 1700px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.activeDistrict{
+    background-color: #AFEEEE;
+}
+
+.input-field{
+    margin: 10px;
+    width: 600px;
+}
+/* 
+.image-view{
+    width: 200px;
+    height: 300px;
+} */
+#uploadImg {
+    max-width: 100px;
+    height: 50px;
+  }
+
+  .upload-btn{
+      align-self: center;
+  }
+
+  .image-upload{
+      border: 5px solid #AFEEEE;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      margin: 10px;
+
+  }
+
+  .image-view{
+      padding: 10px;
+  }
+
+  .uploader-container{
+    display: block;
+    margin-left: 100px;
+  }
+
+  .error{
+      color: red;
+  }
+
+  .success{
+      color: green;
+  }
+
+ 

@@ -14,11 +14,11 @@ const useStyles= makeStyles((theme) => ({
   }
 }))
 
-function NewRequestHotel(props) {
+function NewRequestTaxi(props) {
   const classes = useStyles();
 
   function approveRequestHandler() {
-    axios.put(`/approveHotelRequest/${props.id}`).then((result) => {
+    axios.put(`/approveTaxiRequest/${props.id}`).then((result) => {
       if(result.data==1){
         Swal.fire({
           icon: 'success',
@@ -35,7 +35,7 @@ function NewRequestHotel(props) {
   }
 
   function rejectRequestHandler(){
-    axios.delete(`/rejectHotelRequest/${props.id}`).then((result) => {
+    axios.delete(`/rejectTaxiRequest/${props.id}`).then((result) => {
       if(result.data==1){
         Swal.fire({
           icon: 'success',
@@ -57,8 +57,9 @@ function NewRequestHotel(props) {
         <Avatar className={classes.profilePhoto} alt="profile" variant="rounded" src={props.photo} />
       </div>
       <div>
-        <p>Hotel Name: <span className="span-value">{props.name}</span></p>
-        <p>Registration NO.: <span className="span-value">{props.register}</span></p>
+        <p>Driver Name: <span className="span-value">{props.name}</span></p>
+        <p>Driver License NO.: <span className="span-value">{props.license}</span></p>
+        <p>Charge per km: <span className="span-value">{props.price} LKR</span></p>
         <p>District: <span className="span-value">{props.district}</span></p>
         <p>Email: <span className="span-value">{props.email}</span></p>
         <p>Telephone: <span className="span-value">{props.telephone}</span></p>
@@ -75,4 +76,4 @@ function NewRequestHotel(props) {
   );
 }
 
-export default NewRequestHotel;
+export default NewRequestTaxi;

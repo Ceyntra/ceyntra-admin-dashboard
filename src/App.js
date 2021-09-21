@@ -7,6 +7,7 @@ import NavBar from "./components/navbar/NavBar";
 import TopBar from "./components/navbar/TopBar";
 import Traveller from "./pages/Traveller";
 import Places from "./pages/Places";
+import AddNewPlaces from "./pages/AddNewPlaces";
 import TravelPlaces from "./pages/TravelPlaces";
 import Service from "./pages/Service";
 import Hotel from "./pages/Hotel";
@@ -20,7 +21,9 @@ import Forbidden from "./pages/Forbidden";
 import { LoginProvider } from "./states/LoginContext";
 import Graph from "./components/dashboard/Graph";
 import DistrictHotels from "./pages/DistrictHotels";
-// import Requests from "./pages/Requests";
+import Requests from "./pages/Requests";
+import TaxiList from "./pages/TaxiList";
+import DistrictTaxis from "./pages/DistrictTaxis";
 
 function App() {
   return (
@@ -38,15 +41,22 @@ function App() {
                   <Route exact path="/home" component={Dashboard} />
                   <Route exact path="/home/travellers" component={Traveller} />
                   <Route path="/home/places" component={TravelPlaces} />
+                  <Route path="/home/newplace" component={AddNewPlaces} />
                   <Route path="/home/services" component={Service} />
                   <Route exact path="/home/hotels" component={Hotel} />
                   <Route path="/home/hotels/list" component={HotelList} />
-                  {/* <Route path="/home/hotels/requests" component={Requests} /> */}
+                  <Route path="/home/hotels/requests" component={Requests} />
                   <Route
                     path="/home/hotels/:province"
                     component={DistrictHotels}
                   />
-                  <Route path="/home/taxis" component={Taxi} />
+                  <Route exact path="/home/taxis" component={Taxi} />
+                  <Route path="/home/taxis/list" component={TaxiList} />
+                  <Route path="/home/taxis/requests" component={Requests} />
+                  <Route
+                    path="/home/taxis/:province"
+                    component={DistrictTaxis}
+                  />
                   <Route path="/home/guides" component={Guide} />
                   <Route path="/home/messages" component={Message} />
                   <Route path="/home/profile" component={Profile} />

@@ -1,11 +1,10 @@
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core';
 import React, {useState, useEffect} from 'react';
 import axios from "../service/axios";
 import '../css/hotelList.css';
 import FilterSearchBar from '../components/FilterSearchBar';
 
-function HotelList(){
-    const [hotelList, setHotelList] = useState([])
+function TaxiList() {
+    const [driverList, setDriverList] = useState([])
 
     const [searchedWord, setSearchedWord]=useState("");
     const [searchedResult, setSearchedResult] = useState([]);
@@ -13,54 +12,54 @@ function HotelList(){
     const filterHandler=(term)=>{
         if(term !== ""){
             setSearchedWord(term.toLowerCase());
-            const newHotelList= hotelList.filter((hotel) =>{
-                return hotel['name'].toLowerCase().startsWith(term)
+            const newDriverList= driverList.filter((driver) =>{
+                return driver['name'].toLowerCase().startsWith(term)
             })
-            setSearchedResult(newHotelList);
+            setSearchedResult(newDriverList);
         }else{
-            setSearchedResult(hotelList);
+            setSearchedResult(driverList);
         }
     }
 
-    var getHotelDetails = () => {
-        axios.get(`/getHotelsBriefDetails`).then((result) => {
-          setHotelList(result.data);
+    var getDriverDetails = () => {
+        axios.get(`/getDriverBriefDetails`).then((result) => {
+          setDriverList(result.data);
           setSearchedResult(result.data);
         });
     };
     
     useEffect(() => {
-        getHotelDetails();
+        getDriverDetails();
     }, []);
 
     return(
         <div className="table-content">
             {
-                hotelList.length==0 
-                    ? <h1>No hotels to be desplayed yet...</h1>
+                driverList.length==0 
+                    ? <h1>No drivers to be desplayed yet...</h1>
                     : 
                     <div>
                         <FilterSearchBar
                             filterFunction={filterHandler}
                             term={searchedWord}
-                            word='hotel'
+                            word='driver'
                         />
                         <table>
                             <thead>
                                 <tr>
-                                    <th>HOTEL</th>
+                                    <th>DRIVER</th>
                                     <th>TELEPHONE</th>
                                     <th>EMAIL</th>
                                     <th>DISTRICT</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {searchedResult.map((hotel) => (
-                                    <tr key={hotel['id']}>
-                                        <td>{hotel['name']}</td>
-                                        <td>{hotel['userContactModel']['telephone']}</td>
-                                        <td>{hotel['userContactModel']['email']}</td>
-                                        <td>{hotel['district']}</td>
+                                {searchedResult.map((driver) => (
+                                    <tr key={driver['id']}>
+                                        <td>{driver['name']}</td>
+                                        <td>{driver['userContactModel']['telephone']}</td>
+                                        <td>{driver['userContactModel']['email']}</td>
+                                        <td>{driver['district']}</td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -71,4 +70,4 @@ function HotelList(){
     );
 }
 
-export default HotelList;
+export default TaxiList;

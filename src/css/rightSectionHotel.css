@@ -1,14 +1,15 @@
 .topRatedHotel{
-    background-color: #E6E6FA;
+    /* background-color: #E6E6FA; */
     border-radius: 10px;
-    padding: 2%;
+    padding: 5%;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 1px;
+    border: 1px solid rgb(220,220,220);
 }
 
-.topRatedHotel img{
+/* .topRatedHotel img{
     border-radius: 15px;
-}
+} */
