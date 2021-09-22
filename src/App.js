@@ -26,6 +26,7 @@ import TaxiList from "./pages/TaxiList";
 import DistrictTaxis from "./pages/DistrictTaxis";
 import GuideList from "./pages/GuideList";
 import DistrictGuides from "./pages/DistrictGuides";
+import DistrictPlaces from "./pages/DistrictPlaces";
 
 function App() {
   return (
@@ -42,7 +43,8 @@ function App() {
                 <Switch>
                   <Route exact path="/home" component={Dashboard} />
                   <Route exact path="/home/travellers" component={Traveller} />
-                  <Route path="/home/places" component={TravelPlaces} />
+                  <Route exact path="/home/places" component={TravelPlaces} />
+                  <Route path="/home/places/:province" component={DistrictPlaces} />
                   <Route path="/home/newplace" component={AddNewPlaces} />
                   <Route path="/home/services" component={Service} />
                   <Route exact path="/home/hotels" component={Hotel} />
