@@ -111,7 +111,7 @@ function Dashboard(props) {
       <div className="stat">
         <div className="statTopRow">
           <div className="whiteBG leftTopStat">
-            <h3>Number of Users</h3>
+            <h3>User Registration</h3>
             <Graph data={pageData.dateMap} />
           </div>
 

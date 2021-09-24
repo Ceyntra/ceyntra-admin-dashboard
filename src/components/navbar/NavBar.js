@@ -105,8 +105,7 @@ function NavBar({ url }) {
           </Link>
         ))}
 
-        <ListItem>{"Account Pages".toUpperCase()}</ListItem>
-        <Divider />
+        
         <Link
           className={classes.routerLink}
           to={menuItems[menuItems.length - 1].link}

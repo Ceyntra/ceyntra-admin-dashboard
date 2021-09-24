@@ -21,7 +21,7 @@ function GraphPie() {
     datasets: [
       {
         label: "Users",
-        data: [25, 15, 35, 60],
+        data: [6, 6, 6, 7],
         backgroundColor: [
           "rgba(255, 99, 132, 0.7)",
           "rgba(235, 225, 52, 0.7)",

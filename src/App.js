@@ -46,7 +46,6 @@ function App() {
                   <Route exact path="/home/places" component={TravelPlaces} />
                   <Route path="/home/places/:province" component={DistrictPlaces} />
                   <Route path="/home/newplace" component={AddNewPlaces} />
-                  <Route path="/home/services" component={Service} />
                   <Route exact path="/home/hotels" component={Hotel} />
                   <Route path="/home/hotels/list" component={HotelList} />
                   <Route path="/home/hotels/requests" component={Requests} />
@@ -62,8 +61,6 @@ function App() {
                   <Route path="/home/guides/list" component={GuideList} />
                   <Route path="/home/guides/requests" component={Requests} />
                   <Route path="/home/guides/:province" component={DistrictGuides} />
-                  <Route path="/home/messages" component={Message} />
-                  <Route path="/home/profile" component={Profile} />
                 </Switch>
               </div>
             </Route>

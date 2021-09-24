@@ -40,12 +40,6 @@ const menuItems = [
     link: "/home/newplace",
   },
   {
-    title: "Services",
-    icon: <Build />,
-    active: false,
-    link: "/home/services",
-  },
-  {
     title: "Hotel",
     icon: <Hotel />,
     active: false,
@@ -62,18 +56,6 @@ const menuItems = [
     icon: <EmojiPeople />,
     active: false,
     link: "/home/guides",
-  },
-  {
-    title: "Messages",
-    icon: <Message />,
-    active: false,
-    link: "/home/messages",
-  },
-  {
-    title: "Profile",
-    icon: <Person />,
-    active: false,
-    link: "/home/profile",
   },
 ];
 

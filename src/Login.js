@@ -154,7 +154,7 @@ function Login() {
               <div className="login-password-input-container">
                 <input
                   className="login-password-input"
-                  type="text"
+                  type="password"
                   onChange={(e) => {
                     setpassword(e.target.value);
                   }}
